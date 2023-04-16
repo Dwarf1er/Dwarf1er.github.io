@@ -3,10 +3,13 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { ArrowDownSquare } from "react-bootstrap-icons";
+import calculateRowHeight from "../../utils/calculateRowHeight";
+import { Link } from "react-scroll";
 
 function Home() {
-  const rowsRef = useRef<HTMLDivElement>(null);
   const [navHeight, setNavHeight] = useState(0);
+  const rowsRef = useRef(null);
+  const rowHeight = calculateRowHeight(navHeight, rowsRef);
 
   useEffect(() => {
     const nav = document.querySelector("nav");
@@ -14,14 +17,6 @@ function Home() {
       setNavHeight(nav.offsetHeight);
     }
   }, []);
-
-  let numRows = 0;
-  let rowHeight = `calc((100vh - ${navHeight}px) / ${numRows})`;
-
-  if (rowsRef.current) {
-    numRows = rowsRef.current.querySelectorAll(".row").length;
-    rowHeight = `calc((100vh - ${navHeight}px) / ${numRows})`;
-  }
 
   return (
     <Container id="home" ref={rowsRef} fluid>
@@ -42,9 +37,15 @@ function Home() {
         style={{ height: rowHeight }}
       >
         <Col className="text-center mx-auto">
-          <a href="#projects">
+          <Link
+            to="projects"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={1000}
+          >
             <ArrowDownSquare color="" size={48} />
-          </a>
+          </Link>
         </Col>
       </Row>
     </Container>

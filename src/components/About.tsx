@@ -4,7 +4,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { ArrowDownSquare } from "react-bootstrap-icons";
 
-function Home() {
+function About() {
   const rowsRef = useRef<HTMLDivElement>(null);
   const [navHeight, setNavHeight] = useState(0);
 
@@ -24,31 +24,19 @@ function Home() {
   }
 
   return (
-    <Container id="home" ref={rowsRef} fluid>
+    <Container id="about" fluid>
       <Row className="align-items-center" style={{ height: rowHeight }}>
         <Col md={4} className="text-start mx-auto">
-          <h1 className="display-5 fw-bold">Antoine Poulin</h1>
-          <h2>Full Stack Developer</h2>
-          <p className="fs-4">
-            Developing robust and simple software solutions
-            <br />
-            because oftentimes, it's as easy as turning it off and on again.
-          </p>
+          <h1 className="display-5 fw-bold">About</h1>
         </Col>
       </Row>
-      <Row
-        id="about"
-        className="align-items-center"
-        style={{ height: rowHeight }}
-      >
-        <Col className="text-center mx-auto">
-          <a href="#projects">
-            <ArrowDownSquare color="" size={48} />
-          </a>
+      <Row className="align-items-center" style={{ height: rowHeight }}>
+        <Col md={4} className="text-start mx-auto">
+          <h2>Hello there! I'm Antoine, welcome to my portfolio!</h2>
         </Col>
       </Row>
     </Container>
   );
 }
 
-export default Home;
+export default About;

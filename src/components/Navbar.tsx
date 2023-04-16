@@ -7,7 +7,7 @@ import Logo from "../assets/AntoinePoulinLogo.svg";
 
 function Navbar() {
   return (
-    <ReactBootstrapNavbar bg="light" expand="lg">
+    <ReactBootstrapNavbar bg="light" expand="lg" sticky="top">
       <Container fluid>
         <ReactBootstrapNavbar.Brand href="#home">
           <Image
@@ -19,7 +19,7 @@ function Navbar() {
         <ReactBootstrapNavbar.Toggle aria-controls="basic-navbar-nav" />
         <ReactBootstrapNavbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link>
+            <Nav.Link href="#home">
               <Link
                 to="home"
                 spy={true}
@@ -30,6 +30,7 @@ function Navbar() {
                 Home
               </Link>
             </Nav.Link>
+            <Nav.Link href="#about">About</Nav.Link>
             <Nav.Link href="#skills">Skills</Nav.Link>
             <Nav.Link href="#projects">Projects</Nav.Link>
             <Nav.Link href="#socials">Socials</Nav.Link>

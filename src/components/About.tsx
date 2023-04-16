@@ -24,14 +24,10 @@ function About() {
   }
 
   return (
-    <Container id="about" fluid>
+    <Container id="about" ref={rowsRef} fluid>
       <Row className="align-items-center" style={{ height: rowHeight }}>
         <Col md={4} className="text-start mx-auto">
           <h1 className="display-5 fw-bold">About</h1>
-        </Col>
-      </Row>
-      <Row className="align-items-center" style={{ height: rowHeight }}>
-        <Col md={4} className="text-start mx-auto">
           <h2>Hello there! I'm Antoine, welcome to my portfolio!</h2>
         </Col>
       </Row>

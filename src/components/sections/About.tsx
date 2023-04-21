@@ -25,7 +25,7 @@ function About() {
           <br />
           <p
             className="fs-4"
-            style={{ textAlign: "justify", textJustify: "inter-word" }}
+            style={{ textAlign: "justify", textJustify: "auto" }}
           >
             I'm a recent computer science graduate with a passion for process
             automation. Alongside my skills in .NET, C#, Blazor, and databases

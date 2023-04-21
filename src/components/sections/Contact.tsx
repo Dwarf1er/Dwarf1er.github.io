@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { EnvelopeFill, Github, Linkedin } from "react-bootstrap-icons";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -21,7 +22,23 @@ function Contact() {
       <Row className="align-items-center" style={{ height: rowHeight }}>
         <Col md={4} className="text-start mx-auto">
           <h1 className="display-5 fw-bold">Contact</h1>
-          <h2>CONTACT</h2>
+        </Col>
+      </Row>
+      <Row className="justify-content-center" style={{ height: rowHeight }}>
+        <Col md={1} className="text-start">
+          <a href="mailto:antoine.poulin@protonmail.com">
+            <EnvelopeFill size={50} />
+          </a>
+        </Col>
+        <Col md={1} className="text-start">
+          <a href="https://www.linkedin.com/in/antoine-poulin/">
+            <Linkedin size={50} />
+          </a>
+        </Col>
+        <Col md={1} className="text-start">
+          <a href="http://www.github.com/Dwarf1er">
+            <Github size={50} />
+          </a>
         </Col>
       </Row>
     </Container>

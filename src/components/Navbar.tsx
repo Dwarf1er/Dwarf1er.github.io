@@ -30,10 +30,39 @@ function Navbar() {
                 Home
               </Link>
             </Nav.Link>
-            <Nav.Link href="#about">About</Nav.Link>
-            <Nav.Link href="#skills">Skills</Nav.Link>
-            <Nav.Link href="#projects">Projects</Nav.Link>
-            <Nav.Link href="#contact">Contact</Nav.Link>
+            <Nav.Link href="#about">
+              <Link
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                About
+              </Link>
+            </Nav.Link>
+            <Nav.Link href="#projects">
+              <Link
+                to="projects"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                Projects
+              </Link>
+            </Nav.Link>
+            <Nav.Link href="#contact">
+              <Link
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                Contact
+              </Link>
+            </Nav.Link>
           </Nav>
         </ReactBootstrapNavbar.Collapse>
       </Container>

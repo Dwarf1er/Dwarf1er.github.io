@@ -31,11 +31,7 @@ function Home() {
           </p>
         </Col>
       </Row>
-      <Row
-        id="about"
-        className="align-items-center"
-        style={{ height: rowHeight }}
-      >
+      <Row className="align-items-center" style={{ height: rowHeight }}>
         <Col className="text-center mx-auto">
           <Link
             to="projects"

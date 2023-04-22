@@ -3,11 +3,24 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import ReactBootstrapNavbar from "react-bootstrap/Navbar";
 import Image from "react-bootstrap/Image";
-import Logo from "../assets/AntoinePoulinLogo.svg";
+import Logo from "../../assets/AntoinePoulinLogo.svg";
+import { useEffect, useState } from "react";
+import "./Navbar.css";
 
 function Navbar() {
+  const [expanded, setExpanded] = useState(false);
+
+  const handleLinkClick = () => {
+    setExpanded(false);
+  };
+
   return (
-    <ReactBootstrapNavbar bg="light" expand="lg" sticky="top">
+    <ReactBootstrapNavbar
+      bg="light"
+      expand="lg"
+      sticky="top"
+      expanded={expanded}
+    >
       <Container fluid>
         <ReactBootstrapNavbar.Brand href="#home">
           <Image
@@ -16,7 +29,10 @@ function Navbar() {
             className="d-inline-block align-top logo"
           />
         </ReactBootstrapNavbar.Brand>
-        <ReactBootstrapNavbar.Toggle aria-controls="basic-navbar-nav" />
+        <ReactBootstrapNavbar.Toggle
+          aria-controls="basic-navbar-nav"
+          onClick={() => setExpanded(!expanded)}
+        />
         <ReactBootstrapNavbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#home">
@@ -24,8 +40,10 @@ function Navbar() {
                 to="home"
                 spy={true}
                 smooth={true}
-                offset={-70}
                 duration={500}
+                offset={-70}
+                onClick={handleLinkClick}
+                activeClass="active"
               >
                 Home
               </Link>
@@ -35,8 +53,10 @@ function Navbar() {
                 to="about"
                 spy={true}
                 smooth={true}
-                offset={-70}
                 duration={500}
+                offset={-70}
+                onClick={handleLinkClick}
+                activeClass="active"
               >
                 About
               </Link>
@@ -46,8 +66,10 @@ function Navbar() {
                 to="projects"
                 spy={true}
                 smooth={true}
-                offset={-70}
                 duration={500}
+                offset={-70}
+                onClick={handleLinkClick}
+                activeClass="active"
               >
                 Projects
               </Link>
@@ -57,8 +79,10 @@ function Navbar() {
                 to="contact"
                 spy={true}
                 smooth={true}
-                offset={-70}
                 duration={500}
+                offset={-70}
+                onClick={handleLinkClick}
+                activeClass="active"
               >
                 Contact
               </Link>

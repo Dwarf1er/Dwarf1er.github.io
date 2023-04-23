@@ -38,7 +38,7 @@ function Home() {
             to="projects"
             spy={true}
             smooth={true}
-            offset={-70}
+            offset={-navHeight}
             duration={1000}
           >
             <ArrowDownSquare className="arrow-down-square" color="" size={48} />

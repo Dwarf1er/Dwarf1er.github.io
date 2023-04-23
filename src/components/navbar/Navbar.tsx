@@ -8,16 +8,15 @@ import { useEffect, useState } from "react";
 import "./Navbar.css";
 
 function Navbar() {
+  const [navHeight, setNavHeight] = useState(0);
   const [expanded, setExpanded] = useState(false);
 
-  const homeSection = document.getElementById("home");
-  const aboutSection = document.getElementById("about");
-  const projectsSection = document.getElementById("projects");
-  const contactSection = document.getElementById("contact");
-  const homeOffset = homeSection ? homeSection.offsetTop : -70;
-  const aboutOffset = aboutSection ? aboutSection.offsetTop : -70;
-  const projectsOffset = projectsSection ? projectsSection.offsetTop : -70;
-  const contactOffset = contactSection ? contactSection.offsetTop : -70;
+  useEffect(() => {
+    const nav = document.querySelector("nav");
+    if (nav) {
+      setNavHeight(nav.offsetHeight);
+    }
+  }, []);
 
   const handleLinkClick = () => {
     setExpanded(false);
@@ -51,7 +50,7 @@ function Navbar() {
                   spy={true}
                   smooth={true}
                   duration={500}
-                  offset={homeOffset}
+                  offset={-navHeight}
                   onClick={handleLinkClick}
                   activeClass="active"
                 >
@@ -64,7 +63,7 @@ function Navbar() {
                   spy={true}
                   smooth={true}
                   duration={500}
-                  offset={aboutOffset}
+                  offset={-navHeight}
                   onClick={handleLinkClick}
                   activeClass="active"
                 >
@@ -77,7 +76,7 @@ function Navbar() {
                   spy={true}
                   smooth={true}
                   duration={500}
-                  offset={projectsOffset}
+                  offset={-navHeight}
                   onClick={handleLinkClick}
                   activeClass="active"
                 >
@@ -90,7 +89,7 @@ function Navbar() {
                   spy={true}
                   smooth={true}
                   duration={500}
-                  offset={contactOffset}
+                  offset={-navHeight}
                   onClick={handleLinkClick}
                   activeClass="active"
                 >

@@ -2,3 +2,15 @@
   font-weight: bold;
   text-decoration: none;
 }
+
+.nav-item {
+  display: inline;
+  margin-left: 2rem;
+  color: #333;
+}
+
+.nav-item:hover {
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 115%;
+}

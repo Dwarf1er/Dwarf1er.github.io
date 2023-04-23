@@ -10,6 +10,15 @@ import "./Navbar.css";
 function Navbar() {
   const [expanded, setExpanded] = useState(false);
 
+  const homeSection = document.getElementById("home");
+  const aboutSection = document.getElementById("about");
+  const projectsSection = document.getElementById("projects");
+  const contactSection = document.getElementById("contact");
+  const homeOffset = homeSection ? homeSection.offsetTop : -70;
+  const aboutOffset = aboutSection ? aboutSection.offsetTop : -70;
+  const projectsOffset = projectsSection ? projectsSection.offsetTop : -70;
+  const contactOffset = contactSection ? contactSection.offsetTop : -70;
+
   const handleLinkClick = () => {
     setExpanded(false);
   };
@@ -35,58 +44,60 @@ function Navbar() {
         />
         <ReactBootstrapNavbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">
-              <Link
-                to="home"
-                spy={true}
-                smooth={true}
-                duration={500}
-                offset={-70}
-                onClick={handleLinkClick}
-                activeClass="active"
-              >
-                Home
-              </Link>
-            </Nav.Link>
-            <Nav.Link href="#about">
-              <Link
-                to="about"
-                spy={true}
-                smooth={true}
-                duration={500}
-                offset={-70}
-                onClick={handleLinkClick}
-                activeClass="active"
-              >
-                About
-              </Link>
-            </Nav.Link>
-            <Nav.Link href="#projects">
-              <Link
-                to="projects"
-                spy={true}
-                smooth={true}
-                duration={500}
-                offset={-70}
-                onClick={handleLinkClick}
-                activeClass="active"
-              >
-                Projects
-              </Link>
-            </Nav.Link>
-            <Nav.Link href="#contact">
-              <Link
-                to="contact"
-                spy={true}
-                smooth={true}
-                duration={500}
-                offset={-70}
-                onClick={handleLinkClick}
-                activeClass="active"
-              >
-                Contact
-              </Link>
-            </Nav.Link>
+            <ul>
+              <li className="nav-item">
+                <Link
+                  to="home"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  offset={homeOffset}
+                  onClick={handleLinkClick}
+                  activeClass="active"
+                >
+                  Home
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  to="about"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  offset={aboutOffset}
+                  onClick={handleLinkClick}
+                  activeClass="active"
+                >
+                  About
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  to="projects"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  offset={projectsOffset}
+                  onClick={handleLinkClick}
+                  activeClass="active"
+                >
+                  Projects
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  to="contact"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  offset={contactOffset}
+                  onClick={handleLinkClick}
+                  activeClass="active"
+                >
+                  Contact
+                </Link>
+              </li>
+            </ul>
           </Nav>
         </ReactBootstrapNavbar.Collapse>
       </Container>

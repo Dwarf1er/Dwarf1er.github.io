@@ -2,6 +2,7 @@ import { Link } from "react-scroll";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import ReactBootstrapNavbar from "react-bootstrap/Navbar";
+import { Button } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 import Logo from "../../assets/AntoinePoulinLogo.svg";
 import { useEffect, useState } from "react";
@@ -43,7 +44,7 @@ function Navbar() {
         />
         <ReactBootstrapNavbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <ul>
+            <ul className="navbar-nav">
               <li className="nav-item">
                 <Link
                   to="home"
@@ -98,6 +99,9 @@ function Navbar() {
               </li>
             </ul>
           </Nav>
+          <div>
+            <Button>Toggle Theme</Button>
+          </div>
         </ReactBootstrapNavbar.Collapse>
       </Container>
     </ReactBootstrapNavbar>

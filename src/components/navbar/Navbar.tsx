@@ -7,8 +7,13 @@ import Image from "react-bootstrap/Image";
 import Logo from "../../assets/AntoinePoulinLogo.svg";
 import { useEffect, useState } from "react";
 import "./Navbar.css";
+import { SwitchThemeFn } from "../../types";
 
-function Navbar() {
+interface NavbarProps {
+  onSwitchTheme: SwitchThemeFn;
+}
+
+function Navbar({ onSwitchTheme }: NavbarProps) {
   const [navHeight, setNavHeight] = useState(0);
   const [expanded, setExpanded] = useState(false);
 
@@ -100,7 +105,7 @@ function Navbar() {
             </ul>
           </Nav>
           <div>
-            <Button>Toggle Theme</Button>
+            {/* <Button onClick={onSwitchTheme}>Toggle Theme</Button> */}
           </div>
         </ReactBootstrapNavbar.Collapse>
       </Container>

@@ -5,6 +5,7 @@ import Col from "react-bootstrap/Col";
 import { ArrowDownSquare } from "react-bootstrap-icons";
 import calculateRowHeight from "../../utils/calculateRowHeight";
 import { Link } from "react-scroll";
+import "./Home.css";
 
 function Home() {
   const [navHeight, setNavHeight] = useState(0);
@@ -37,10 +38,10 @@ function Home() {
             to="projects"
             spy={true}
             smooth={true}
-            offset={-70}
+            offset={-navHeight}
             duration={1000}
           >
-            <ArrowDownSquare color="" size={48} />
+            <ArrowDownSquare className="arrow-down-square" color="" size={48} />
           </Link>
         </Col>
       </Row>

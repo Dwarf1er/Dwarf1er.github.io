@@ -1,7 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import { Container, Row, Col } from "react-bootstrap";
 import { ArrowDownSquare } from "react-bootstrap-icons";
 import calculateRowHeight from "../../utils/calculateRowHeight";
 import { Link } from "react-scroll";
@@ -41,7 +39,7 @@ function Home() {
             offset={-navHeight}
             duration={1000}
           >
-            <ArrowDownSquare className="arrow-down-square" color="" size={48} />
+            <ArrowDownSquare className="arrow-down-square" size={48} />
           </Link>
         </Col>
       </Row>

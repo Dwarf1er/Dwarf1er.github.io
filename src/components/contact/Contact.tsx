@@ -26,17 +26,23 @@ function Contact() {
       </Row>
       <Row className="justify-content-center" style={{ height: rowHeight }}>
         <Col xs={4} md={1} className="text-start">
-          <a href="mailto:antoine.poulin@protonmail.com">
+          <a
+            className="contact-icon"
+            href="mailto:antoine.poulin@protonmail.com"
+          >
             <EnvelopeFill size={50} />
           </a>
         </Col>
         <Col xs={4} md={1} className="text-start">
-          <a href="https://www.linkedin.com/in/antoine-poulin/">
+          <a
+            className="contact-icon"
+            href="https://www.linkedin.com/in/antoine-poulin/"
+          >
             <Linkedin size={50} />
           </a>
         </Col>
         <Col xs={4} md={1} className="text-start">
-          <a href="http://www.github.com/Dwarf1er">
+          <a className="contact-icon" href="http://www.github.com/Dwarf1er">
             <Github size={50} />
           </a>
         </Col>

@@ -1,27 +1,77 @@
 :root {
-  --background: #ffffff;
+  --background-primary: #ffffff;
+  --background-secondary: #f2f2f2;
   --text-primary: #000;
-  --text-secondary: #8e05c2;
-  --accent: #8e05c2;
-  --border: #333;
-  --form-bg: #fff;
+  --accent: #00FFC8;
+  --accent-secondary: #00cca0;
 }
 
 [data-theme='dark'] {
-  --background: #000;
+  --background-primary: #313338;
+  --background-secondary: #232428;
   --text-primary: #fff;
-  --text-secondary: #8e05c2;
-  --accent: #8e05c2;
-  --border: #808080;
-  --form-bg: #191919;
+  --accent: #00EC91;
+  --accent-secondary: #00b747;
 }
 
 .app {
-  background-color: var(--background);
+  background-color: var(--background-primary);
   color: var(--text-primary);
+}
+
+a:hover {
+  color: var(--accent-secondary);
+}
+
+a, .active {
+  color: var(--accent);
+}
+
+a, .active:hover {
+  color: var(--accent-secondary);
+}
+
+a, .contact-icon {
+  color: var(--accent);
+}
+
+a, .contact-icon:hover {
+  color: var(--accent-secondary);
+}
+
+.navbar {
+  background-color: var(--background-secondary);
+}
+
+.nav-item:hover {
+  color: var(--accent-secondary);
+}
+
+#primary-button {
+  background-color: var(--accent);
+  color: var(--text-primary);
+}
+
+#primary-button:hover {
+  background-color: var(--accent-secondary)
+}
+
+#theme-switcher {
+  background-color: var(--accent);
+  color: var(--text-primary);
+}
+
+#theme-switcher:hover {
+  color: var(--accent-secondary)
+}
+
+.card-body {
+  background-color: var(--background-secondary);
 }
 
 .logo {
   width: 3.5rem;
   height: 3.5rem;
+  fill: var(--text-primary) !important;
+  stroke: var(--text-primary) !important;
 }

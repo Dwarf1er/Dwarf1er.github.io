@@ -6,11 +6,12 @@
 .nav-item {
   display: inline;
   margin-left: 2rem;
-  color: #333;
 }
 
 .nav-item:hover {
-  font-weight: bold;
   cursor: pointer;
-  font-size: 115%;
+}
+
+#theme-switcher {
+  background: none;
 }

@@ -41,7 +41,7 @@ function Home() {
             offset={-navHeight}
             duration={1000}
           >
-            <ArrowDownSquare className="arrow-down-square" color="" size={48} />
+            <ArrowDownSquare className="arrow-down-square" size={48} />
           </Link>
         </Col>
       </Row>

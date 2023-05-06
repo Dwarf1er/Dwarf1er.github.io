@@ -8,7 +8,7 @@ import Contact from "./components/contact/Contact";
 import useLocalStorage from "use-local-storage";
 
 function App() {
-  const [theme, setTheme] = useLocalStorage<"light" | "dark">("theme", "light");
+  const [theme, setTheme] = useLocalStorage<"light" | "dark">("theme", "dark");
   const switchTheme: SwitchThemeFn = () => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);

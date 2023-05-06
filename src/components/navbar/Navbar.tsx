@@ -3,8 +3,6 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import ReactBootstrapNavbar from "react-bootstrap/Navbar";
 import { Button } from "react-bootstrap";
-import Image from "react-bootstrap/Image";
-import Logo from "../../assets/AntoinePoulinLogo.svg";
 import { useEffect, useState } from "react";
 import "./Navbar.css";
 import { SwitchThemeFn } from "../../types";
@@ -29,19 +27,12 @@ function Navbar({ onSwitchTheme }: NavbarProps) {
   };
 
   return (
-    <ReactBootstrapNavbar
-      bg="light"
-      expand="lg"
-      sticky="top"
-      expanded={expanded}
-    >
+    <ReactBootstrapNavbar expand="lg" sticky="top" expanded={expanded}>
       <Container fluid>
         <ReactBootstrapNavbar.Brand href="#home">
-          <Image
-            src={Logo}
-            alt="Antoine Poulin logo"
-            className="d-inline-block align-top logo"
-          />
+          <svg className="logo" viewBox="0 0 30 65">
+            <use xlinkHref="/src/assets/AntoinePoulinLogo.svg#logo"></use>
+          </svg>
         </ReactBootstrapNavbar.Brand>
         <ReactBootstrapNavbar.Toggle
           aria-controls="basic-navbar-nav"
@@ -105,7 +96,9 @@ function Navbar({ onSwitchTheme }: NavbarProps) {
             </ul>
           </Nav>
           <div>
-            {/* <Button onClick={onSwitchTheme}>Toggle Theme</Button> */}
+            <Button className="border-0" onClick={onSwitchTheme}>
+              Toggle Theme
+            </Button>
           </div>
         </ReactBootstrapNavbar.Collapse>
       </Container>

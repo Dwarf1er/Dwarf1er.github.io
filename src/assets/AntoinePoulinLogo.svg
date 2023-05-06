@@ -62,29 +62,34 @@
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1"
+     id="logo"
      style="display:inline"
      transform="translate(-61.873799,-85.342955)">
     <g
-       id="g877"
+       class="logo"
+       id="logo"
        transform="matrix(1.001417,0,0,1.001417,-0.11349892,-0.12142835)">
       <g
-         id="g859"
+         class="logo"
+         id="logo"
          transform="matrix(0.90521938,0,0,0.91020034,-9.8388945,-9.4780258)">
         <path
+           class="logo"
            style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
            d="m 93.786796,148.31357 -0.0087,2.31632 -8.004829,-0.0623 v -2.26928 z"
-           id="path853" />
+           id="logo" />
         <path
+           class="logo"
            style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
            d="m 79.439236,150.4678 h 1.820413 l 14.787736,-40.27352 9.700555,25.33616 2.12749,0.24658 -11.603609,-31.21854 z"
-           id="path855"
+           id="logo"
            sodipodi:nodetypes="ccccccc" />
       </g>
       <path
+         class="logo"
          style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.240164px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m 76.766456,155.96357 h -1.76074 l 0.02258,-42.19524 c 0.338498,-0.0556 8.67364,-0.73416 15.087753,1.09231 5.020664,1.42967 7.768964,5.41768 7.979355,10.09417 0.07277,1.61749 0.08808,3.64492 -1.559132,5.88205 -1.131796,1.5371 -3.559485,3.20269 -6.406237,4.92566 l -0.873302,-1.67964 c 0.305584,-0.15555 4.117418,-1.68035 5.915591,-4.11572 1.747073,-2.36617 1.813516,-5.34112 0.936223,-8.01106 -0.739275,-2.24991 -2.47267,-4.4867 -6.876336,-5.59807 -2.886699,-0.72854 -7.023833,-0.84402 -12.420613,-0.61498 z"
-         id="path861"
+         id="logo"
          sodipodi:nodetypes="cccsssccssscc" />
     </g>
   </g>

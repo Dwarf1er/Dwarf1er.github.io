@@ -59,7 +59,11 @@ function ProjectCard({ project }: { project: Project }) {
       <div className="card-body">
         <h5 className="card-title">{project.title}</h5>
         <p className="card-text">{project.description}</p>
-        <a href={project.demoLink} className="btn btn-primary me-2 border-0">
+        <a
+          href={project.demoLink}
+          id="primary-button"
+          className="btn btn-primary me-2 border-0"
+        >
           Live Demo
         </a>
         <a href={project.githubLink} className="btn btn-secondary border-0">

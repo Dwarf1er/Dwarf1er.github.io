@@ -1,7 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import { Container, Row, Col } from "react-bootstrap";
 import { ArrowDownSquare } from "react-bootstrap-icons";
 import calculateRowHeight from "../../utils/calculateRowHeight";
 import { Link } from "react-scroll";

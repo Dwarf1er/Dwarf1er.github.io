@@ -3,7 +3,7 @@
   --background-secondary: #f2f2f2;
   --text-primary: #000;
   --accent: #00FFC8;
-  --accent-secondary: #00b747;
+  --accent-secondary: #00cca0;
 }
 
 [data-theme='dark'] {
@@ -19,11 +19,15 @@
   color: var(--text-primary);
 }
 
+a:hover {
+  color: var(--accent-secondary);
+}
+
 a, .active {
   color: var(--accent);
 }
 
-a:hover {
+a, .active:hover {
   color: var(--accent-secondary);
 }
 
@@ -39,13 +43,26 @@ a, .contact-icon:hover {
   background-color: var(--background-secondary);
 }
 
-.btn-primary {
-  background-color: var(--accent) !important;
-  color: var(--text-primary) !important;
+.nav-item:hover {
+  color: var(--accent-secondary);
 }
 
-.btn-primary:hover {
+#primary-button {
+  background-color: var(--accent);
+  color: var(--text-primary);
+}
+
+#primary-button:hover {
   background-color: var(--accent-secondary)
+}
+
+#theme-switcher {
+  background-color: var(--accent);
+  color: var(--text-primary);
+}
+
+#theme-switcher:hover {
+  color: var(--accent-secondary)
 }
 
 .card-body {

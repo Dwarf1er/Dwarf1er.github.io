@@ -16,7 +16,7 @@ function App() {
 
   return (
     <div className="app" data-theme={theme}>
-      <Navbar onSwitchTheme={switchTheme} />
+      <Navbar currentTheme={theme} onSwitchTheme={switchTheme} />
       <Home />
       <About />
       <Projects />

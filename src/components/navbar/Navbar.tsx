@@ -5,13 +5,15 @@ import ReactBootstrapNavbar from "react-bootstrap/Navbar";
 import { Button } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import "./Navbar.css";
+import { MoonFill, SunFill } from "react-bootstrap-icons";
 import { SwitchThemeFn } from "../../types";
 
 interface NavbarProps {
   onSwitchTheme: SwitchThemeFn;
+  currentTheme: string;
 }
 
-function Navbar({ onSwitchTheme }: NavbarProps) {
+function Navbar({ onSwitchTheme, currentTheme }: NavbarProps) {
   const [navHeight, setNavHeight] = useState(0);
   const [expanded, setExpanded] = useState(false);
 
@@ -96,8 +98,12 @@ function Navbar({ onSwitchTheme }: NavbarProps) {
             </ul>
           </Nav>
           <div>
-            <Button className="border-0" onClick={onSwitchTheme}>
-              Toggle Theme
+            <Button
+              id="theme-switcher"
+              className="border-0"
+              onClick={onSwitchTheme}
+            >
+              {currentTheme === "dark" ? <SunFill /> : <MoonFill />}
             </Button>
           </div>
         </ReactBootstrapNavbar.Collapse>

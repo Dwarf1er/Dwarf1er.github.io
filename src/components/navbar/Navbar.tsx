@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import "./Navbar.css";
 import { MoonFill, SunFill } from "react-bootstrap-icons";
 import { SwitchThemeFn } from "../../types";
+import logo from "../../assets/AntoinePoulinLogo.svg";
 
 interface NavbarProps {
   onSwitchTheme: SwitchThemeFn;
@@ -33,7 +34,7 @@ function Navbar({ onSwitchTheme, currentTheme }: NavbarProps) {
       <Container fluid>
         <ReactBootstrapNavbar.Brand href="#home">
           <svg className="logo" viewBox="0 0 30 65">
-            <use xlinkHref="/src/assets/AntoinePoulinLogo.svg#logo"></use>
+            <use xlinkHref={`${logo}#logo`}></use>
           </svg>
         </ReactBootstrapNavbar.Brand>
         <ReactBootstrapNavbar.Toggle

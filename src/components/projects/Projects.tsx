@@ -25,18 +25,11 @@ function Projects() {
 
   const projects = [
     {
-      title: "Project 1",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      demoLink: "",
-      githubLink: "",
-    },
-    {
-      title: "Project 2",
-      description:
-        "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      demoLink: "",
-      githubLink: "",
-    },
+      title: "PerlFuck Transpiler",
+      description: "The PerlFuck Transpiler is a simple Perl transpiler that translates a string of code into a series of Perl expressions using only 9 sybmols ({/.=~+}). It is designed to be an educational project that pushes the limits of the language",
+      demoLink: "https://antoinepoulin.com/perlfuck",
+      githubLink: "https://github.com/Dwarf1er/perlfuck",
+    }
   ];
 
   return (

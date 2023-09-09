@@ -27,12 +27,7 @@ function About() {
             className="fs-4"
             style={{ textAlign: "justify", textJustify: "auto" }}
           >
-            I'm a recent computer science graduate with a passion for process
-            automation. Alongside my skills in .NET, C#, Blazor, and databases
-            like SQL and MySQL. I believe in approaching life with a positive
-            and light-hearted attitude, while bringing professionalism and
-            dedication to my work as a software developer. My ultimate goal is
-            to streamline processes through the development of web applications.
+            Hello, I'm Antoine, a Full Stack Developer passionate about creating exceptional web experiences. I approach life with a positive and light-hearted attitude, infusing professionalism and dedication into my work as a software developer. With expertise in both front-end and back-end development, I'm dedicated to crafting scalable and user-friendly applications. My constant drive for learning keeps me at the forefront of the latest technologies. Let's connect and explore tech collaborations or share insights. Let's build the future together, one line of code at a time!
           </p>
         </Col>
       </Row>

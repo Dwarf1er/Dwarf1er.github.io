@@ -29,6 +29,12 @@ function Projects() {
       description: "The PerlFuck Transpiler is a simple Perl transpiler that translates a string of code into a series of Perl expressions using only 9 sybmols ({/.=~+}). It is designed to be an educational project that pushes the limits of the language",
       demoLink: "https://antoinepoulin.com/perlfuck",
       githubLink: "https://github.com/Dwarf1er/perlfuck",
+    },
+    {
+      title: "VaxiCode Parser",
+      description: "The Vaxicode Parser extracts information from vaccination QR codes using the SHC standard, making it easy for anyone to access their vaccination records",
+      demoLink: "https://antoinepoulin.com/vaxicode-parser",
+      githubLink: "https://github.com/Dwarf1er/vaxicode-parser",
     }
   ];
 
@@ -56,10 +62,15 @@ function ProjectCard({ project }: { project: Project }) {
           href={project.demoLink}
           id="primary-button"
           className="btn btn-primary me-2 border-0"
+          target="_blank"
         >
           Live Demo
         </a>
-        <a href={project.githubLink} className="btn btn-secondary border-0">
+        <a
+          href={project.githubLink}
+          className="btn btn-secondary border-0"
+          target="_blank"
+        >
           GitHub
         </a>
       </div>

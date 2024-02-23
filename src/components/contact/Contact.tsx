@@ -29,6 +29,7 @@ function Contact() {
           <a
             className="contact-icon"
             href="mailto:antoine.poulin@protonmail.com"
+            target="_blank"
           >
             <EnvelopeFill size={50} />
           </a>
@@ -37,12 +38,17 @@ function Contact() {
           <a
             className="contact-icon"
             href="https://www.linkedin.com/in/antoine-poulin/"
+            target="_blank"
           >
             <Linkedin size={50} />
           </a>
         </Col>
         <Col xs={4} md={1} className="text-start">
-          <a className="contact-icon" href="http://www.github.com/Dwarf1er">
+          <a
+            className="contact-icon"
+            href="http://www.github.com/Dwarf1er"
+            target="_blank"
+          >
             <Github size={50} />
           </a>
         </Col>

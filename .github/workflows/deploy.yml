@@ -1,55 +1,67 @@
 name: Deploy
 
 on:
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
+    push:
+        branches:
+            - master
+    pull_request:
+        branches:
+            - master
 
 jobs:
-  build:
-    name: Build
-    runs-on: ubuntu-latest
+    build:
+        name: Build
+        runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v2
+        steps:
+            - name: Set HUGO Version
+              run: echo "HUGO_VERSION=0.145.0" >> $GITHUB_ENV
+            - name: Install HUGO
+              run: |
+                  wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
+                  && sudo dpkg -i ${{ runner.temp }}/hugo.deb
 
-      - name: Setup Node
-        uses: actions/setup-node@v1
-        with:
-          node-version: 19
+            - name: Checkout Repo
+              uses: actions/checkout@v4
+              with:
+                  submodules: recursive
+                  fetch-depth: 0
 
-      - name: Install dependencies
-        uses: bahmutov/npm-install@v1
+            - name: Setup Pages
+              id: pages
+              uses: actions/configure-pages@v5
 
-      - name: Build project
-        run: npm run build
+            - name: Install Node.js dependencies
+              run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
 
-      - name: Upload production-ready build files
-        uses: actions/upload-artifact@v2
-        with:
-          name: production-files
-          path: ./dist
+            - name: Create third_party_js Directory
+              run: mkdir -p layouts/partials/third_party_js
 
-  deploy:
-    name: Deploy
-    needs: build
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master'
+            - name: Build with Hugo
+              env:
+                  HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
+                  HUGO_ENVIRONMENT: production
+                  TZ: America/Toronto
+              run: |
+                  hugo \
+                    --gc \
+                    --minify \
+                    --baseURL "${{ steps.pages.outputs.base_url }}/"
 
-    steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: production-files
-          path: ./dist
+            - name: Add CNAME for custom domain
+              run: echo "antoinepoulin.com" > ./public/CNAME
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          cname: antoinepoulin.com
+            - name: Upload artifact
+              uses: actions/upload-pages-artifact@v3
+              with:
+                  path: ./public
+
+    deploy:
+        name: Deploy to GitHub Pages
+        runs-on: ubuntu-latest
+        needs: build
+        environment: github-pages
+        steps:
+            - name: Deploy to GitHub Pages
+              id: deployment
+              uses: actions/deploy-pages@v4

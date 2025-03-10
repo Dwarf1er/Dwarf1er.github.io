@@ -18,6 +18,7 @@ dist-ssr
 hugo.exe
 hugo.linux
 hugo.darwin
+.hugo_build.lock
 
 # Editor directories and files
 .vscode/*

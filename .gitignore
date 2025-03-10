@@ -9,8 +9,16 @@ lerna-debug.log*
 
 node_modules
 dist
+tmp
 dist-ssr
 *.local
+
+/public/
+/resources/_gen/
+hugo.exe
+hugo.linux
+hugo.darwin
+.hugo_build.lock
 
 # Editor directories and files
 .vscode/*

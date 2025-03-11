@@ -52,12 +52,15 @@ paginate = 10
     [[params.social]]
       name = "github"
       url = "https://github.com/Dwarf1er"
+      alt= "GitHub Profile"
     [[params.social]]
       name = "linkedin"
       url = "https://linkedin.com/in/antoine-poulin"
+      alt= "LinkedIn Profile"
     [[params.social]]
       name = "email"
       url = "mailto:contact@antoinepoulin.com"
+      alt= "Email Contact"
     [[params.projects]]
       title = "OpenLabel"
       description = "C# library for ZPL label applications that makes network printing, scaling, and templating easy."

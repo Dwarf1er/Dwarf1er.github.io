@@ -1,9 +1,10 @@
 ---
 title: Antoine Poulin
-date: 2025-03-10T15:00:00+00:00
+date: 2025-03-10
 params:
-  about: https://{{ .Site.BaseURL}}/about
+  about: https://antoinepoulin.com/about
   email: contact@antoinepoulin.com
   social:
-    github:
+    github: https://github.com/Dwarf1er
+    linkedin: https://linkedin.com/in/antoine-poulin
 ---

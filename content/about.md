@@ -1,9 +1,9 @@
 ---
 title: "👨‍💻 About Me"
-date: 2025-03-10T15:00:00+00:00
+date: 2025-03-10
 draft: false
 layout: "terms"
-description: "About - {{ .Site.Title }}"
+description: "Hi, I'm Antoine Poulin! This page tells my story and what I'm working on."
 url: "/about"
 ---
 

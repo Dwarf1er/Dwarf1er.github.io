@@ -1,9 +1,9 @@
 ---
 title: "Home"
-date: 2025-03-10T15:00:00+00:00
+date: 2025-03-10
 draft: false
 layout: "home"
-description: "{{ .Title }}"
+description: "Antoine Poulin – Software developer and tech enthusiast. Explore my projects, blog, and professional journey."
 params:
     author: Antoine Poulin
 ---

@@ -14,9 +14,9 @@ I'm a software developer who automates complex processes and builds tools that m
 **Recent wins:** $25K saved with custom tooling, turning PowerShell scripts into user-friendly web apps.
 
 **Currently working on:**
-- **OpenLabel**: An open-source label printing solution that simplifies ZPL generation and management, check out the project [here!](https://github.com/Dwarf1er/openlabel)
-- **Environment Variable Explorer**: An open-source cross-platform editor for environment variables, checkout the project [here!](https://github.com/Dwarf1er/environment-variable-explorer)
-- **Contributing to Photino**: Helping improve the cross-platform .NET desktop framework for web-based applicactions, checkout the project [here!](https://github.com/tryphotino/photino.Blazor)
+- **[OpenLabel](https://github.com/Dwarf1er/openlabel)**: An open-source label printing solution that simplifies ZPL generation and management
+- **[Environment Variable Explorer](https://github.com/Dwarf1er/environment-variable-explorer)**: An open-source cross-platform editor for environment variables
+- **[Contributing to Photino](https://github.com/tryphotino/photino.Blazor)**: Helping improve the cross-platform .NET desktop framework for web-based applicactions
 
 ## **Work Experience**
 

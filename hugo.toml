@@ -69,10 +69,10 @@ paginate = 10
       stars = "https://img.shields.io/github/stars/Dwarf1er/OpenLabel?style=for-the-badge&logo=github"
       demo = "https://nuget.org/packages/openlabel"
     [[params.projects]]
-      title = "SQLAnyDB Tools"
-      description = "Suite of developer tools to automate and streamline tasks for SQL Anywhere databases."
-      image = "/sqlanydb-tools-logo.png"
-      repo = "https://github.com/Dwarf1er/sqlanydb-tools"
+      title = "Environment Variable Explorer"
+      description = "Environment Variable Explorer is a cross-platform tool for managing environment variables."
+      image = "/environment-variable-explorer-logo.png"
+      repo = "https://github.com/Dwarf1er/environment-variables-explorer"
       demo = ""
 
 [module]

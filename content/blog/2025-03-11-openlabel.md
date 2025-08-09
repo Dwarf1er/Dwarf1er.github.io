@@ -3,7 +3,7 @@ title: "I got annoyed by expensive proprietary ZPL tools, so I built my own"
 date: 2025-03-11
 draft: false
 categories: ["Open Source", "C#"]
-tags: ["ZPL", "Labeling", "Open Source"]
+tags: ["zpl", "opensource", "csharp"]
 ---
 
 ### Labeling Shouldn’t Be a Hassle

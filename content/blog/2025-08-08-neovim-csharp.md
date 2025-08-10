@@ -457,6 +457,4 @@ You now have:
 - Fuzzy file & text search
 - Debugging via `nvim-dap`
 
-### Bonus
-
 If you want to see a fully working example of this configuration and more, check out my [dotfiles repository on GitHub](https://github.com/Dwarf1er/dotfiles). It includes everything from this guide plus additional utilities and personal tweaks.

@@ -1,6 +1,6 @@
 ---
 title: "How to Setup Neovim 0.12+ for C# Development with vim.pack"
-date: 2025-03-11
+date: 2025-08-08
 draft: false
 categories: ["Open Source", "C#", "Neovim"]
 tags: ["neovim", "opensource", "csharp"]

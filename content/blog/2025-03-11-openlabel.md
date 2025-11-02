@@ -53,7 +53,7 @@ This is just the beginning! This tool is made to facilitate the creation of appl
 
 If OpenLabel interests you consider taking a few minutes to do the following:
 - ⭐ Star the repository on GitHub to show your support and help others discover this project.
-- 🚀 Contribute: Whether you’ve found a bug, want to improve the code, or have ideas for new features, your contributions are more than welcome. Fork the repo, submit a pull request, or open an issue. Let’s make OpenLabel even better together!
-- 📢 Spread the Word: Share OpenLabel with your community, colleagues, or anyone who works with ZPL labels. The more users we have, the stronger the project becomes!
+- Contribute: Whether you’ve found a bug, want to improve the code, or have ideas for new features, your contributions are more than welcome. Fork the repo, submit a pull request, or open an issue. Let’s make OpenLabel even better together!
+- Spread the Word: Share OpenLabel with your community, colleagues, or anyone who works with ZPL labels. The more users we have, the stronger the project becomes!
 
 Every little bit of feedback, contribution, or star helps OpenLabel grow into a tool that can support more use cases, be more efficient, and ultimately make label printing a smoother process for developers everywhere.

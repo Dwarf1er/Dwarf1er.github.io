@@ -87,7 +87,7 @@ DEC in Computer Science and Mathematics – 2017-2019
 - **Platform & DevOps:** Docker | Kubernetes *(learning)* | CI/CD Pipelines | Git | GitHub Actions | GitLab CI | Azure DevOps
 - **Frameworks & Tools:** .NET | Flask | Node.js | Blazor | Photino.Blazor
 - **Databases:** MSSQL | MariaDB | MySQL | SQLite
-- **Architecture & Practices:** REST APIs | Microservices | Internal Tooling | Automation | Developer Experience
+- **Architecture & Practices:** REST APIs | Internal Tooling | Automation | Developer Experience
 - **Operating Systems:** Linux (Ubuntu, Fedora, Debian, Arch) | Windows | Windows Server
 - **Development Environment:** Neovim | Linux-based development workflows
 - **Languages:** English (native) | French (native)

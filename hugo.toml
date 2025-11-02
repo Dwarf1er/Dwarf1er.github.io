@@ -48,7 +48,7 @@ paginate = 10
 
 [params]
     siteName = "Antoine Poulin"
-    catchPhrase = "Software Developer"
+    catchPhrase = "Backend Developer - Internal Tooling"
     [[params.social]]
       name = "github"
       url = "https://github.com/Dwarf1er"

@@ -1,6 +1,6 @@
 ---
 title: "👨‍💻 About Me"
-date: 2025-10-21
+date: 2025-11-02
 draft: false
 layout: "terms"
 description: "Hi, I'm Antoine Poulin! This page tells my story and what I'm working on."
@@ -9,9 +9,22 @@ url: "/about"
 
 ## Hello there, I'm Antoine 👋
 
-Most of my projects start the same way: "There has to be a better way to do this."
+Most of my projects start the same way: **"There has to be a better way to do this."**
 
-I'm a software developer who builds automation tools and open-source solutions. I use Linux, write code in Neovim, and genuinely believe that good software should be transparent, modifiable, and shareable. If I'm building something useful, why shouldn't others be able to use it too?
+I'm a backend developer specializing in internal tooling and developer productivity. I build CI/CD pipelines, create automation tools, and eliminate friction in development workflows. I use Linux, write code in Neovim, and genuinely believe that good software should be open, transparent, and shareable.
+
+**Recent wins:** 
+- Reduced deployment time by 80% by building CI/CD pipelines that automate change bundling and releases
+- Saved $25K annually by building a custom ZPL label printing library that replaced expensive third-party software
+- Developed internal REST APIs for data integration and cross-system communication
+- Transformed PowerShell scripts into user-friendly web applications for non-technical teams
+
+**Currently working on:**
+- Building platform tools and automation at Algo Design
+- Learning Golang and Kubernetes for cloud-native platform engineering
+- **[OpenLabel](https://github.com/Dwarf1er/openlabel)**: Open-source C# library for ZPL label printing
+- **[Environment Variable Explorer](https://github.com/Dwarf1er/environment-variable-explorer)**: Cross-platform tool for managing environment variables
+
 
 **Recent wins:** 
 - Leading the migration of a legacy .NET Framework 4.5.2 application to .NET 9.0, including architectural redesign
@@ -28,33 +41,33 @@ I'm a software developer who builds automation tools and open-source solutions. 
 September 2024 – Present
 **Tech Stack:** C# | .NET | Blazor | MSSQL | GitLab CI | Azure DevOps
 
-- Leading the migration of a legacy .NET Framework 4.5.2 application to .NET 9.0, including modernizing the architecture and updating dependencies.
-- Reduced deployment preparation time by 80% by implementing CI/CD pipelines that automate database change bundling and deployment processes.
-- Improved developer productivity by automating repetitive SQL tasks and database operations.
+- Leading the migration of a legacy .NET Framework 4.5.2 application to .NET 9.0, including modernizing the architecture and updating dependencies
+- Reduced deployment preparation time by 80% by implementing CI/CD pipelines that automate database change bundling and deployment processes
+- Developed internal REST APIs for data integration and cross-system communication, improving developer workflows
 
 {{< img-header src="/trevi.png" alt="Trevi Logo" >}}Trévi – Full Stack Developer{{< /img-header >}}
 January 2024 – September 2024
 **Tech Stack:** C# | .NET | Blazor | MSSQL | PowerShell | Azure DevOps
 
-- Saved $25,000 annually by developing an in-house ZPL printing solution that replaced expensive third-party software.  
-- Built a web application that dynamically parsed PowerShell scripts to auto-generate forms with validation and tooltips, enabling staff to run complex operations without learning command-line syntax.
-- Worked with the helpdesk team to design intuitive interfaces for technical operations.
+- Saved $25,000 annually by developing an in-house ZPL printing solution that replaced expensive third-party software
+- Built a web application that dynamically parsed PowerShell scripts to auto-generate forms with validation and tooltips, enabling staff to run complex operations without learning command-line syntax
+- Worked with the helpdesk team to design intuitive interfaces for technical operations
 
 {{< img-header src="/bell-helicopter.png" height="41" alt="Bell Helicopter Logo" >}}Bell Helicopter – Software Developer{{< /img-header >}}
 September 2022 – January 2024
 **Tech Stack:** C# | .NET | MSSQL | PowerShell | Atlassian Suite (Confluence, Jira, Bitbucket)
 
 - Collaborated with warehouse staff to identify requirements and iterate on solutions
-- Streamlined warehouse operations by developing custom .NET applications that improved shipment tracking.  
-- Reduced update and installation ticket resolution time from 4 days to 15 minutes by automating software deployments.
+- Streamlined warehouse operations by developing custom .NET applications that improved shipment tracking
+- Reduced update and installation ticket resolution time from 4 days to 15 minutes by automating software deployments
 
 {{< img-header src="/bitumar.png" alt="Bitumar Logo" >}}Bitumar - IT Technician{{< /img-header >}}
 May 2018 – September 2022
 **Tech Stack:** Windows Server | Linux | PowerShell | Bash
 
-- Managed server infrastructure and provided technical support.
-- Automated routine maintenance, updates, and deployment tasks.
-- Gained experience with system administration, troubleshooting, and scripting.
+- Managed server infrastructure and provided technical support
+- Automated routine maintenance, updates, and deployment tasks
+- Gained experience with system administration, troubleshooting, and scripting
 
 ---
 
@@ -70,11 +83,11 @@ DEC in Computer Science and Mathematics – 2017-2019
 
 ## **Skills**
 
-- **Languages**: C# | JavaScript | TypeScript | Python | PowerShell | Bash
-- **Frameworks & Tools**: .NET | Blazor | Photino.Blazor | Node.js | Flask
-- **Databases**: MSSQL | MariaDB | MySQL | SQLite
-- **Operating Systems**: Windows | Windows Server | Linux (Ubuntu, Fedora, Debian, Arch)
-- **DevOps**: Git | GitHub Actions | GitLab CI | Azure DevOps | CI/CD Pipelines
-- **System Administration**: Server management | Automation scripting | Deployment workflows
-- **Development Environment**: Neovim | Linux-based development workflows
-- **Languages**: French (native) | English (native)
+- **Languages:** Python | Node.js | Golang *(learning)* | C# | JavaScript | TypeScript | PowerShell | Bash
+- **Platform & DevOps:** Docker | Kubernetes *(learning)* | CI/CD Pipelines | Git | GitHub Actions | GitLab CI | Azure DevOps
+- **Frameworks & Tools:** .NET | Flask | Node.js | Blazor | Photino.Blazor
+- **Databases:** MSSQL | MariaDB | MySQL | SQLite
+- **Architecture & Practices:** REST APIs | Microservices | Internal Tooling | Automation | Developer Experience
+- **Operating Systems:** Linux (Ubuntu, Fedora, Debian, Arch) | Windows | Windows Server
+- **Development Environment:** Neovim | Linux-based development workflows
+- **Languages:** English (native) | French (native)

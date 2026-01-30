@@ -11,29 +11,19 @@ url: "/about"
 
 Most of my projects start the same way: **"There has to be a better way to do this."**
 
-I'm a backend developer specializing in internal tooling and developer productivity. I build CI/CD pipelines, create automation tools, and eliminate friction in development workflows. I use Linux, write code in Neovim, and genuinely believe that good software should be open, transparent, and shareable.
+I believe software should be open and shareable. I enjoy building developer tooling and find great satisfaction in automating processes. I live in my terminal on Arch Linux and Hyprland; yes, with one of those vilainesque [split keyboards](https://keeb.io/products/iris-se) :)
 
 **Recent wins:** 
+- Leading the migration of a legacy .NET Framework 4.5.2 application to .NET 9.0, including architectural redesign
 - Reduced deployment time by 80% by building CI/CD pipelines that automate change bundling and releases
 - Saved $25K annually by building a custom ZPL label printing library that replaced expensive third-party software
 - Developed internal REST APIs for data integration and cross-system communication
 - Transformed PowerShell scripts into user-friendly web applications for non-technical teams
 
 **Currently working on:**
-- Building platform tools and automation at Algo Design
-- Learning Golang and Kubernetes for cloud-native platform engineering
-- **[OpenLabel](https://github.com/Dwarf1er/openlabel)**: Open-source C# library for ZPL label printing
-- **[Environment Variable Explorer](https://github.com/Dwarf1er/environment-variable-explorer)**: Cross-platform tool for managing environment variables
-
-
-**Recent wins:** 
-- Leading the migration of a legacy .NET Framework 4.5.2 application to .NET 9.0, including architectural redesign
-- Saved $25K annually by building a custom ZPL label printing library
-- Transformed PowerShell scripts into user-friendly web applications for non-technical teams
-
-**Currently working on:**
-- **[OpenLabel](https://github.com/Dwarf1er/openlabel)**: An open-source label printing solution that simplifies ZPL generation and management
-- **[Environment Variable Explorer](https://github.com/Dwarf1er/environment-variable-explorer)**: An open-source cross-platform editor for environment variables
+- **Building platform tools and APIs at Algo Design**
+- **[OpenLabel](https://github.com/Dwarf1er/OpenLabel)**: C# library for ZPL label printing
+- **Learning Golang and exploring Rust**
 
 ## **Work Experience**
 
@@ -83,7 +73,7 @@ DEC in Computer Science and Mathematics – 2017-2019
 
 ## **Skills**
 
-- **Languages:** Python | Node.js | Golang *(learning)* | C# | JavaScript | TypeScript | PowerShell | Bash
+- **Languages:** Python | Node.js | Golang *(learning)* | Rust (learning) | C# | JavaScript | TypeScript | PowerShell | Bash
 - **Platform & DevOps:** Docker | Kubernetes *(learning)* | CI/CD Pipelines | Git | GitHub Actions | GitLab CI | Azure DevOps
 - **Frameworks & Tools:** .NET | Flask | Node.js | Blazor | Photino.Blazor
 - **Databases:** MSSQL | MariaDB | MySQL | SQLite

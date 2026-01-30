@@ -12,12 +12,12 @@ Neovim 0.12 introduced `vim.pack`, a built-in package manager that eliminates th
 
 ### What You'll Get
 
-- ✅ Syntax highlighting for C# and Razor
-- ✅ IntelliSense, diagnostics, and navigation
-- ✅ Formatting with csharpier
-- ✅ Fuzzy finding via Telescope
-- ✅ .NET debugging with breakpoints
-- ✅ Modular, future-proof config
+- Syntax highlighting for C# and Razor
+- IntelliSense, diagnostics, and navigation
+- Formatting with csharpier
+- Fuzzy finding via Telescope
+- .NET debugging with breakpoints
+- Modular, future-proof config
 
 ### Prerequisites
 Before you begin, make sure you have:
@@ -25,7 +25,7 @@ Before you begin, make sure you have:
 - .NET SDK 8.0+ (Download [here](https://dotnet.microsoft.com/en-us/download))
 - `git` installed (for cloning plugins)
 
-### 📂 Configuration Structure
+### Configuration Structure
 
 Here’s the structure of my `~/.config/nvim` directory:
 ```text

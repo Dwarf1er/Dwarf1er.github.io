@@ -75,6 +75,12 @@ paginate = 10
       repo = "https://github.com/Dwarf1er/idfmgr"
       demo = ""
     [[params.projects]]
+      title = "forestair-ir-rs"
+      description = "Rust implementation of the ForestAir AC IR protocol on ESP32."
+      image = "/forestair-ir-rs-logo.png"
+      repo = "https://github.com/Dwarf1er/forestair-ir-rs"
+      demo = ""
+    [[params.projects]]
       title = "Environment Variable Explorer"
       description = "Environment Variable Explorer is a cross-platform tool for managing environment variables."
       image = "/environment-variable-explorer-logo.png"

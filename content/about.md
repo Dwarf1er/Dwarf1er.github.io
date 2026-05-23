@@ -14,7 +14,7 @@ Most of my projects start the same way: **"There has to be a better way to do th
 I believe software should be open and shareable. I enjoy building developer tooling and find great satisfaction in automating processes. I live in my terminal on Arch Linux and Hyprland; yes, with one of those vilainesque [split keyboards](https://keeb.io/products/iris-se) :)
 
 **Recent wins:** 
-- Leading the migration of a legacy .NET Framework 4.5.2 application to .NET 9.0, including architectural redesign
+- Leading the migration of a legacy .NET Framework 4.5.2 application to .NET 10.0, including architectural redesign
 - Reduced deployment time by 80% by building CI/CD pipelines that automate change bundling and releases
 - Saved $25K annually by building a custom ZPL label printing library that replaced expensive third-party software
 - Developed internal REST APIs for data integration and cross-system communication
@@ -31,9 +31,9 @@ I believe software should be open and shareable. I enjoy building developer tool
 September 2024 – Present
 **Tech Stack:** C# | .NET | Blazor | MSSQL | GitLab CI | Azure DevOps
 
-- Leading the migration of a legacy .NET Framework 4.5.2 application to .NET 9.0, including modernizing the architecture and updating dependencies
-- Reduced deployment preparation time by 80% by implementing CI/CD pipelines that automate database change bundling and deployment processes
 - Developed internal REST APIs for data integration and cross-system communication, improving developer workflows
+- Leading the migration of a legacy .NET Framework 4.5.2 application to .NET 10.0, including modernizing the architecture and updating dependencies
+- Reduced deployment preparation time by 80% by implementing CI/CD pipelines that automate database change bundling and deployment processes
 
 {{< img-header src="/trevi.png" alt="Trevi Logo" >}}Trévi – Full Stack Developer{{< /img-header >}}
 January 2024 – September 2024
@@ -55,9 +55,9 @@ September 2022 – January 2024
 May 2018 – September 2022
 **Tech Stack:** Windows Server | Linux | PowerShell | Bash
 
-- Managed server infrastructure and provided technical support
-- Automated routine maintenance, updates, and deployment tasks
-- Gained experience with system administration, troubleshooting, and scripting
+- Administered Windows and Linux servers.
+- Automated operational tasks using PowerShell and Bash scripts.
+- Managed software deployments and supported production environments.
 
 ---
 

@@ -1,0 +1,27 @@
+{{ $paginator := .Paginate (.Scratch.Get "blogPages") }}
+{{ range $paginator.Pages.GroupByDate "January 2006" }}
+  <section class="flex flex-col gap-4">
+    <h2 class="text-2xl max-sm:text-xl font-bold">{{ .Key }}</h2>
+    <ul class="flex flex-col">
+      {{ range .Pages.ByDate.Reverse }}
+      <li>
+        <a href="{{ .RelPermalink }}" class="flex flex-row justify-between gap-4 border-l px-4 py-2 hover:text-sky-400">
+          <span>{{ .LinkTitle }}</span>
+          <time class="max-lg:hidden whitespace-nowrap" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_medium" }}</time>
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </section>
+{{ end }}
+
+{{ if or $paginator.HasPrev $paginator.HasNext }}
+<nav class="flex flex-row items-center justify-center gap-10" aria-label="Pagination">
+  {{ if $paginator.HasPrev }}
+    <a href="{{ $paginator.Prev.URL }}" class="font-bold border border-sky-400 p-2 hover:bg-sky-400 focus:text-sky-400 text-center">{{ i18n "previous" }}</a>
+  {{ end }}
+  {{ if $paginator.HasNext }}
+    <a href="{{ $paginator.Next.URL }}" class="font-bold border border-sky-400 p-2 hover:bg-sky-400 focus:text-sky-400 text-center">{{ i18n "next" }}</a>
+  {{ end }}
+</nav>
+{{ end }}

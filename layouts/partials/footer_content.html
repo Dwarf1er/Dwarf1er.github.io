@@ -1,0 +1,16 @@
+<footer class="site-footer">
+  <p>© {{ now.Year }} {{ site.Params.author }}</p>
+  {{- if not .IsHome }}
+  <ul aria-label="{{ i18n "contact" }}">
+    {{- range site.Params.social }}
+    <li><a href="{{ .url }}"{{ if hasPrefix .url "http" }} target="_blank" rel="me noopener"{{ end }}>{{ .label }}</a></li>
+    {{- end }}
+  </ul>
+  {{- end }}
+  {{- if eq site.Language.Lang "en" }}
+  <ul>
+    <li><a href="{{ "/blog/" | relLangURL }}">{{ i18n "blog" }}</a></li>
+    <li><a href="{{ "/tags/" | relLangURL }}">{{ i18n "tags" }}</a></li>
+  </ul>
+  {{- end }}
+</footer>

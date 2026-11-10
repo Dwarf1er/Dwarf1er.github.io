@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+
+<head>
+  {{ partial "head.html" . }}
+</head>
+
+<body class="bg-gradient-to-r from-slate-900 to-slate-800 font-mono text-white">
+  <a class="skip-link" href="#main">{{ i18n "skip_to_content" }}</a>
+  <div class="site-wrap container mx-auto flex flex-col px-4 sm:max-w-full">
+    {{ block "main" . }}{{ end }}
+  </div>
+  {{ partialCached "head/js.html" . }}
+  {{ partial "third_party_js.html" . }}
+</body>
+
+</html>

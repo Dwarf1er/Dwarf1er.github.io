@@ -1,0 +1,5 @@
+{{- /* On the homepage the name and menu are part of the page itself, so the
+       header only shows the hamburger on small screens. */ -}}
+<header class="flex flex-row py-4{{ if .IsHome }} sm:hidden{{ end }}">
+  {{ partial "menu.html" . }}
+</header>

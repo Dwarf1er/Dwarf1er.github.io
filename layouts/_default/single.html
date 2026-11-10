@@ -1,0 +1,14 @@
+{{ define "main" }}
+  {{ partial "header.html" . }}
+  <main id="main" class="flex flex-col pt-8 gap-10 w-full">
+    <div class="flex flex-col w-full gap-4">
+      <h1 class="text-3xl max-sm:text-2xl font-bold">{{ .Title }}</h1>
+      <div class="flex flex-col gap-4 w-full">
+        <hr />
+        {{ if .Params.showCV }}{{ partial "cv-links.html" (dict "align" "start") }}{{ end }}
+        {{ partial "markdown.html" . }}
+      </div>
+    </div>
+  </main>
+  {{ partial "footer_regular.html" . }}
+{{ end }}

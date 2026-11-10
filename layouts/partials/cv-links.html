@@ -1,0 +1,17 @@
+{{- /* CV download links. Each link only renders once its PDF exists under
+       static/ (paths set in hugo.toml [params.cv]), so the block stays hidden
+       until the files are added. Pass (dict "page" . "align" "start") to left-align. */ -}}
+{{- $links := slice -}}
+{{- range $lang, $path := site.Params.cv -}}
+  {{- if fileExists (path.Join "static" $path) -}}
+    {{- $links = $links | append (dict "lang" $lang "path" $path) -}}
+  {{- end -}}
+{{- end -}}
+{{- with $links }}
+<div class="cv-links{{ if eq $.align "start" }} cv-links--start{{ end }}">
+  <span class="cv-label">{{ i18n "cv_download" }}</span>
+  {{- range sort . "lang" (cond (eq site.Language.Lang "fr") "desc" "asc") }}
+  <a href="{{ .path | relURL }}" download hreflang="{{ .lang }}">{{ i18n (printf "cv_%s" .lang) }}</a>
+  {{- end }}
+</div>
+{{- end }}

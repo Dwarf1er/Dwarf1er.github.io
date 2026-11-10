@@ -1,0 +1,7 @@
+{{ $current := . }}
+{{ range site.Menus.main }}
+<li class="nav-button font-bold border border-sky-400 px-3 py-2 hover:bg-sky-400 focus:text-sky-400 text-center">
+  <a href="{{ .URL }}"{{ if $current.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>{{ .Name }}</a>
+</li>
+{{ end }}
+{{ partial "lang-switch.html" . }}

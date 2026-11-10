@@ -1,0 +1,7 @@
+{{ range site.Params.social }}
+  <div>
+    <a href="{{ .url }}" aria-label="{{ .label }}"{{ if hasPrefix .url "http" }} target="_blank" rel="me noopener"{{ end }}>
+      {{ partial (printf "content/svg/%s" (replace .name " " "")) . }}
+    </a>
+  </div>
+{{ end }}

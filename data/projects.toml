@@ -1,0 +1,100 @@
+# Projects shown on /projects/ and /fr/projets/, in display order.
+# Keep these descriptions consistent with AGENTS.md, the CVs, and LinkedIn.
+
+[[projects]]
+  title = "Sobarch"
+  tech = ["Arch Linux", "Shell", "GitHub Actions", "BTRFS", "Snapper", "Limine", "Fuzzel", "Archinstall"]
+  [[projects.links]]
+    kind = "website"
+    url = "https://sobarch.antoinepoulin.com"
+  [[projects.links]]
+    kind = "source"
+    url = "https://github.com/Dwarf1er/sobarch"
+  [projects.en]
+    summary = "A custom Arch Linux distribution with its own ISO and installer."
+    details = [
+      "BTRFS snapshots managed by Snapper show up directly in the Limine boot menu, so a previous system state can be booted straight from the boot menu.",
+      "After booting a snapshot, a notification asks whether to make the rollback permanent.",
+      "The installer builds on Archinstall instead of reimplementing it, and supports unattended installs from an answer file. Keyboard-driven Fuzzel menus wrap existing system tools such as nmcli.",
+      "GitHub Actions builds the installer ISO every month, signs it with GPG, and publishes it as a release. Other workflows check AUR packages for updates and deploy the project website.",
+    ]
+  [projects.fr]
+    summary = "Une distribution Arch Linux personnalisée, avec son propre ISO et son installer."
+    details = [
+      "Les snapshots BTRFS gérés par Snapper apparaissent directement dans le boot menu de Limine, ce qui permet de booter un état antérieur du système directement depuis ce menu.",
+      "Après avoir booté sur un snapshot, une notification demande s'il faut rendre le rollback permanent.",
+      "L'installer s'appuie sur Archinstall plutôt que de le réimplémenter et prend en charge les installations unattended à partir d'un answer file. Des menus Fuzzel pilotés au clavier orchestrent des outils système existants comme nmcli.",
+      "GitHub Actions builde l'ISO de l'installer chaque mois, la signe avec GPG et la publie comme release. D'autres workflows vérifient les mises à jour des packages AUR et déploient le site du projet.",
+    ]
+
+[[projects]]
+  title = "SQL Anywhere MCP Server"
+  tech = ["C#", ".NET", "ODBC", "MCP", "SQL Anywhere 17", "GitHub Actions", "NuGet"]
+  [[projects.links]]
+    kind = "source"
+    url = "https://github.com/Dwarf1er/sqlanywhere-mcp"
+  [[projects.links]]
+    kind = "nuget"
+    url = "https://www.nuget.org/packages/SqlAnywhereMcp"
+  [projects.en]
+    summary = "A cross-platform MCP server that lets AI assistants explore SAP SQL Anywhere 17 databases. Started as an internal initiative at Algo Design."
+    details = [
+      "Schema introspection (tables, columns, indexes, foreign keys, constraints) and SQL code introspection (procedures, functions, views, triggers, events), plus SQL source search.",
+      "Read-only queries by default, with explicitly allowed procedures and credentials managed outside the server.",
+      "Persistent ODBC connections with automatic reconnection, multiple databases, hot reload, and query cancellation. Runs on Windows, Linux, and macOS.",
+      "Published on NuGet and listed in the official MCP Registry. On every push and pull request, CI runs the tests and checks that the built binary and NuGet tool start and speak MCP. Tagged releases build self-contained binaries for Windows, Linux, and macOS with SHA-256 checksums and push the packages to NuGet.",
+    ]
+  [projects.fr]
+    summary = "Un serveur MCP cross-platform qui permet aux assistants IA d'explorer des bases de données SAP SQL Anywhere 17. Lancé comme initiative interne chez Algo Design."
+    details = [
+      "Introspection des schémas (tables, colonnes, index, foreign keys, constraints) et du code SQL (stored procedures, functions, views, triggers, events), avec recherche dans le code SQL.",
+      "Queries read-only par défaut, stored procedures explicitement autorisées et credentials gérés à l'extérieur du serveur.",
+      "Connexions ODBC persistantes avec reconnexion automatique, plusieurs bases de données, hot reload et annulation de queries. Fonctionne sous Windows, Linux et macOS.",
+      "Publié sur NuGet et listé dans le MCP Registry officiel. À chaque push et pull request, la CI roule les tests et vérifie que le binaire et l'outil NuGet démarrent et parlent MCP. Les releases taguées buildent des binaires self-contained pour Windows, Linux et macOS avec checksums SHA-256 et publient les packages sur NuGet.",
+    ]
+
+[[projects]]
+  title = "OpenLabel"
+  tech = ["C#", ".NET", "ZPL", "NuGet"]
+  [[projects.links]]
+    kind = "source"
+    url = "https://github.com/Dwarf1er/openlabel"
+  [[projects.links]]
+    kind = "nuget"
+    url = "https://www.nuget.org/packages/OpenLabel"
+  [projects.en]
+    summary = "An open-source C# library for applications that print to ZPL label printers."
+    details = [
+      "Network printing, DPI-aware label scaling, and a Mustache-inspired template engine with conditional blocks.",
+      "About 96 GitHub stars and 3,200 NuGet downloads.",
+    ]
+  [projects.fr]
+    summary = "Une librairie C# open source pour les applications qui impriment sur des imprimantes d'étiquettes ZPL."
+    details = [
+      "Network printing, scaling selon le DPI et un template engine inspiré de Mustache avec blocs conditionnels.",
+      "Environ 96 stars sur GitHub et 3 200 téléchargements NuGet.",
+    ]
+
+[[projects]]
+  title = "forestair-ir-rs"
+  tech = ["Rust", "ESP32", "Infrared", "Reverse engineering"]
+  [[projects.links]]
+    kind = "source"
+    url = "https://github.com/Dwarf1er/forestair-ir-rs"
+  [[projects.links]]
+    kind = "talk"
+    url = "https://www.youtube.com/watch?v=Zmq2x9Xt8Ak"
+  [projects.en]
+    summary = "The complete infrared protocol of an air conditioner remote, reverse-engineered and reimplemented in Rust on an ESP32."
+    details = [
+      "Captured the remote's signals with an IR receiver, dumped the payloads in hex, and compared them button by button to work out the protocol.",
+      "Every feature of the original remote is supported, not just a few commands.",
+      "Presented at Code @ Québec (talk in French).",
+    ]
+  [projects.fr]
+    summary = "Reverse engineering du protocole infrarouge complet d'une télécommande de climatiseur, réimplémenté en Rust sur un ESP32."
+    details = [
+      "Capture des signaux avec un récepteur IR, dump des payloads en hex et comparaison bouton par bouton pour comprendre le protocole.",
+      "Toutes les fonctions de la télécommande d'origine sont prises en charge, pas seulement quelques commandes.",
+      "Présenté à Code @ Québec.",
+    ]

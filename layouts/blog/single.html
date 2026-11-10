@@ -1,0 +1,27 @@
+{{ define "main" }}
+  {{ partial "header.html" . }}
+  <main id="main" class="flex flex-col pt-8 gap-10">
+    <article class="flex flex-col w-full gap-4">
+      <h1 class="text-3xl max-sm:text-2xl font-bold">{{ .Title }}</h1>
+      <div class="post-meta">
+        <p>{{ i18n "published" }} <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time></p>
+        {{- if gt (.Lastmod.Sub .Date).Hours 24.0 }}
+        <p>{{ i18n "updated" }} <time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod | time.Format ":date_long" }}</time></p>
+        {{- end }}
+        <p>{{ i18n "reading_time" (dict "Count" .ReadingTime) }}</p>
+      </div>
+      {{- with .Params.tags }}
+      <ul class="tag-list" aria-label="{{ i18n "tags" }}">
+        {{- range . }}
+        <li><a href="{{ printf "/tags/%s/" (. | urlize) | relLangURL }}">{{ . }}</a></li>
+        {{- end }}
+      </ul>
+      {{- end }}
+      <hr />
+      <div class="prose prose-invert max-w-full">
+        {{ .Content }}
+      </div>
+    </article>
+  </main>
+  {{ partial "footer_regular.html" . }}
+{{ end }}

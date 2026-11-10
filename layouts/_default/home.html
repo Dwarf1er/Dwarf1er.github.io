@@ -1,0 +1,30 @@
+{{ define "main" }}
+<div class="home-page flex flex-col">
+  {{ partial "header.html" . }}
+  <main id="main" class="flex flex-col justify-center items-center gap-8 flex-grow home-main">
+    <div class="flex flex-col gap-4 items-center justify-center text-center">
+      <h1 class="font-bold text-5xl hover:text-sky-400 max-sm:text-4xl">
+        <a href="{{ "/" | relLangURL }}" class="whitespace-nowrap">{{ site.Params.siteName }}</a>
+      </h1>
+      <p class="text-2xl max-sm:text-xl">{{ site.Params.catchPhrase }}</p>
+    </div>
+
+    <div class="home-intro">
+      {{ .Content }}
+    </div>
+
+    {{ partial "cv-links.html" (dict "align" "center") }}
+
+    <!-- Navigation for big screens -->
+    <ul class="flex flex-row justify-center items-center gap-6 text-xl max-sm:hidden">
+      {{ partial "home_menu.html" . }}
+    </ul>
+
+    <!-- Social -->
+    <div class="flex flex-row gap-6 p-4 border">
+      {{ partial "social.html" . }}
+    </div>
+  </main>
+  {{ partial "footer_regular.html" . }}
+</div>
+{{ end }}

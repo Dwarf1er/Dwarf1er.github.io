@@ -1,0 +1,5 @@
+{{- /* Markdown links: external http(s) links open in a new tab; internal and mailto links don't. */ -}}
+{{- $u := urls.Parse .Destination -}}
+{{- $external := and (in (slice "http" "https") $u.Scheme) (ne $u.Host (urls.Parse site.BaseURL).Host) -}}
+<a href="{{ .Destination | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if $external }} target="_blank" rel="noopener"{{ end }}>{{ .Text }}</a>
+{{- /**/ -}}

@@ -1,0 +1,20 @@
+{{- /* Link to this page's translation, or to the other language's homepage. */ -}}
+{{- $target := "" -}}
+{{- $lang := "" -}}
+{{- range .Translations }}{{ $target = .RelPermalink }}{{ $lang = .Language }}{{ end -}}
+{{- if not $target -}}
+  {{- range site.Languages -}}
+    {{- if ne .Lang site.Language.Lang -}}
+      {{- $lang = . -}}
+      {{- $target = cond (eq .Lang site.Sites.Default.Language.Lang) "/" (printf "/%s/" .Lang) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- with $target }}
+<li class="lang-switch text-center">
+  <a href="{{ . }}" hreflang="{{ $lang.LanguageCode }}" lang="{{ $lang.LanguageCode }}" title="{{ i18n "switch_language" }}">
+    <span aria-hidden="true">{{ i18n "switch_language_short" }}</span>
+    <span class="visually-hidden">{{ i18n "switch_language" }}</span>
+  </a>
+</li>
+{{- end }}

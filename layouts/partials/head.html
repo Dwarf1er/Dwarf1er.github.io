@@ -1,0 +1,78 @@
+{{- $title := cond .IsHome (printf "%s — %s" site.Title site.Params.catchPhrase) (printf "%s | %s" .Title site.Title) -}}
+{{- if eq .Kind "404" }}{{ $title = printf "404 — %s | %s" (i18n "not_found_title") site.Title }}{{ end -}}
+{{- if eq .Kind "term" }}{{ $title = printf "%s: %s | %s" (i18n "tags") (.Title | lower) site.Title }}{{ end -}}
+{{- $ogTitle := cond .IsHome site.Title .Title -}}
+{{- $desc := site.Params.description -}}
+{{- with .Description }}{{ $desc = . }}{{ else }}{{ if .IsPage }}{{ $desc = .Summary | plainify | htmlUnescape | truncate 160 }}{{ end }}{{ end -}}
+{{- if eq .Kind "term" }}{{ $desc = printf "Blog posts by %s tagged %q." site.Params.author (.Title | lower) }}{{ end -}}
+{{- $isPost := and .IsPage (eq .Section "blog") -}}
+{{- $image := (site.Params.ogImage | default "/og-image.png") | absURL -}}
+{{- with site.Params.ogImageLocalized }}{{ $image = . | absURL }}{{ end -}}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ $title }}</title>
+<meta name="description" content="{{ $desc }}">
+<meta name="author" content="{{ site.Params.author }}">
+{{- if eq .Kind "404" }}
+<meta name="robots" content="noindex">
+{{- else }}
+<link rel="canonical" href="{{ .Permalink }}">
+{{- end }}
+<link rel="icon" href="{{ "favicon.ico" | absURL }}" sizes="any">
+<meta name="theme-color" content="#0f172a">
+{{- if and .IsTranslated (ne .Kind "404") }}
+{{- range .AllTranslations }}
+<link rel="alternate" hreflang="{{ .Language.LanguageCode }}" href="{{ .Permalink }}">
+{{- end }}
+{{- range where .AllTranslations "Language.Lang" site.Sites.Default.Language.Lang }}
+<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
+{{- end }}
+{{- end }}
+{{- range .AlternativeOutputFormats }}
+{{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
+{{- end }}
+
+<!-- Open Graph / social previews -->
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:type" content="{{ cond $isPost "article" "website" }}">
+<meta property="og:title" content="{{ $ogTitle }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:image" content="{{ $image }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ site.Title }} — {{ site.Params.catchPhrase }}">
+<meta property="og:locale" content="{{ site.Params.ogLocale }}">
+{{- range .Translations }}
+<meta property="og:locale:alternate" content="{{ .Site.Params.ogLocale }}">
+{{- end }}
+{{- if $isPost }}
+<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+<meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
+<meta property="article:author" content="{{ site.Params.author }}">
+{{- range .Params.tags }}
+<meta property="article:tag" content="{{ . }}">
+{{- end }}
+{{- end }}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ $ogTitle }}">
+<meta name="twitter:description" content="{{ $desc }}">
+<meta name="twitter:image" content="{{ $image }}">
+
+<!-- Geo tags -->
+<meta name="ICBM" content="45.503182, -73.569806">
+<meta name="geo.position" content="45.503182;-73.569806">
+<meta name="geo.region" content="CA-QC">
+<meta name="geo.placename" content="Montreal">
+
+<!-- Structured data -->
+{{- $sameAs := slice -}}
+{{- range site.Params.social }}{{ if hasPrefix .url "http" }}{{ $sameAs = $sameAs | append .url }}{{ end }}{{ end -}}
+{{- $person := dict "@type" "Person" "name" site.Params.author "url" ("/" | absURL) "jobTitle" (cond (eq site.Language.Lang "fr") "Développeur logiciel" "Software Developer") "sameAs" $sameAs -}}
+{{- if .IsHome }}
+<script type="application/ld+json">{{ merge $person (dict "@context" "https://schema.org" "email" (printf "mailto:%s" site.Params.email) "knowsAbout" (slice "DevOps" "CI/CD" "Linux" "Automation" "Developer tooling" "C#" ".NET")) | jsonify | safeJS }}</script>
+{{- else if $isPost }}
+<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@type" "BlogPosting" "headline" .Title "description" $desc "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00") "dateModified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00") "url" .Permalink "image" $image "inLanguage" site.Language.LanguageCode "author" $person | jsonify | safeJS }}</script>
+{{- end }}
+
+{{ partialCached "head/css.html" . }}

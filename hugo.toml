@@ -1,41 +1,70 @@
-baseURL = 'https://antoinepoulin.com'
-languageCode = 'en-us'
+baseURL = 'https://antoinepoulin.com/'
 title = 'Antoine Poulin'
 theme = 'terminal'
 timeZone = "America/Toronto"
+enableRobotsTXT = true
 
-[menus]
-  [[menus.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about"
-    weight = 20
-  [[menus.main]]
-    identifier = "projects"
-    name = "Projects"
-    url = "/projects"
-    weight = 30
-  [[menus.main]]
-    identifier = "blog"
-    name = "Blog"
-    url = "/blog"
-    weight = 40
-  [[menus.main]]
-    identifier = "tags"
-    name = "Tags"
-    url = "/tags"
-    weight = 50
+# English stays at the root (existing URLs unchanged); French lives under /fr/.
+defaultContentLanguage = 'en'
+defaultContentLanguageInSubdir = false
 
-paginate = 10
+[languages]
+  [languages.en]
+    languageCode = 'en-CA'
+    languageName = 'English'
+    weight = 1
+    [languages.en.params]
+      catchPhrase = "Software Developer | DevOps, CI/CD & Linux automation"
+      description = "Antoine Poulin is a software developer working on DevOps, CI/CD, Linux, and developer tooling. Builds internal tools and automation in C#/.NET, Bash, and PowerShell."
+      ogLocale = "en_CA"
+    [[languages.en.menus.main]]
+      identifier = "about"
+      name = "About"
+      url = "/about/"
+      weight = 20
+    [[languages.en.menus.main]]
+      identifier = "projects"
+      name = "Projects"
+      url = "/projects/"
+      weight = 30
+    [[languages.en.menus.main]]
+      identifier = "blog"
+      name = "Blog"
+      url = "/blog/"
+      weight = 40
+
+  [languages.fr]
+    languageCode = 'fr-CA'
+    languageName = 'Français'
+    weight = 2
+    [languages.fr.params]
+      catchPhrase = "Développeur logiciel | DevOps, CI/CD et automatisation Linux"
+      description = "Antoine Poulin est un développeur logiciel orienté DevOps, CI/CD, Linux et outils pour développeurs. Il conçoit des outils internes et de l'automatisation en C#/.NET, Bash et PowerShell."
+      ogLocale = "fr_CA"
+      ogImageLocalized = "/og-image-fr.png"
+    [[languages.fr.menus.main]]
+      identifier = "about"
+      name = "À propos"
+      url = "/fr/a-propos/"
+      weight = 20
+    [[languages.fr.menus.main]]
+      identifier = "projects"
+      name = "Projets"
+      url = "/fr/projets/"
+      weight = 30
+    [[languages.fr.menus.main]]
+      identifier = "blog"
+      name = "Blog (EN)"
+      url = "/blog/"
+      weight = 40
+
+[pagination]
+  pagerSize = 10
 
 [permalinks]
   blog = "/blog/:year/:month/:day/:title/"
 
 [taxonomies]
-  tag = "tags"
-  author = "authors"
-
-[indexes]
   tag = "tags"
 
 [markup]
@@ -45,49 +74,39 @@ paginate = 10
     fractions = true
     superscript = true
     unsafe = true
+  [markup.highlight]
+    style = "tokyonight-night"
 
 [params]
     siteName = "Antoine Poulin"
-    catchPhrase = "Backend Developer - Internal Tooling"
+    author = "Antoine Poulin"
+    email = "contact@antoinepoulin.com"
+    ogImage = "/og-image.png"
+    githubProfile = "https://github.com/Dwarf1er"
+
+    # CV downloads. Drop the PDFs at these paths under static/ and the
+    # download links appear automatically on the homepage and About page.
+    [params.cv]
+      en = "/cv/antoine-poulin-cv-en.pdf"
+      fr = "/cv/antoine-poulin-cv-fr.pdf"
+
     [[params.social]]
       name = "github"
+      label = "GitHub"
       url = "https://github.com/Dwarf1er"
       alt= "GitHub Profile"
     [[params.social]]
       name = "linkedin"
+      label = "LinkedIn"
       url = "https://linkedin.com/in/antoine-poulin"
       alt= "LinkedIn Profile"
     [[params.social]]
       name = "email"
+      label = "Email"
       url = "mailto:contact@antoinepoulin.com"
       alt= "Email Contact"
-    [[params.projects]]
-      title = "OpenLabel"
-      description = "C# library for ZPL label applications that makes network printing, scaling, and templating easy."
-      image = "/openlabel.png"
-      repo = "https://github.com/Dwarf1er/openlabel"
-      stars = "https://img.shields.io/github/stars/Dwarf1er/OpenLabel?style=for-the-badge&logo=github"
-      demo = "https://nuget.org/packages/openlabel"
-    [[params.projects]]
-      title = "idfmgr"
-      description = "Lightweight wrapper around idf.py that simplifies ESP-IDF version management, project creation with templates, and switching between GCC and Clang toolchains."
-      image = "/idfmgr-logo.png"
-      repo = "https://github.com/Dwarf1er/idfmgr"
-      demo = ""
-    [[params.projects]]
-      title = "forestair-ir-rs"
-      description = "Rust implementation of the ForestAir AC IR protocol on ESP32."
-      image = "/forestair-ir-rs-logo.png"
-      repo = "https://github.com/Dwarf1er/forestair-ir-rs"
-      demo = ""
-    [[params.projects]]
-      title = "Environment Variable Explorer"
-      description = "Environment Variable Explorer is a cross-platform tool for managing environment variables."
-      image = "/environment-variable-explorer-logo.png"
-      repo = "https://github.com/Dwarf1er/environment-variable-explorer"
-      demo = ""
 
 [module]
   [module.hugoVersion]
     extended = false
-    min = "0.116.0"
+    min = "0.128.0"

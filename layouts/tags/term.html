@@ -1,0 +1,10 @@
+{{ define "main" }}
+{{ partial "header.html" . }}
+<main id="main" class="flex flex-col gap-5 pt-8">
+  <h1 class="text-3xl max-sm:text-2xl font-bold">{{ i18n "tags" }}: {{ .Title | lower }}</h1>
+  <hr />
+  {{ .Scratch.Set "blogPages" .Pages }}
+  {{ partial "pagination.html" . }}
+</main>
+{{ partial "footer_regular.html" . }}
+{{ end }}

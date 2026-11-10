@@ -1,0 +1,13 @@
+{{ define "main" }}
+{{ partial "header.html" . }}
+<main id="main" class="flex flex-col gap-6 pt-8">
+  <h1 class="text-3xl max-sm:text-2xl font-bold">404 — {{ i18n "not_found_title" }}</h1>
+  <hr />
+  <p class="page-lead">{{ i18n "not_found_body" }}</p>
+  <p><a class="text-link" href="{{ "/" | relLangURL }}">{{ i18n "not_found_home" }}</a></p>
+  {{- if eq site.Language.Lang "en" }}
+  <p class="page-lead" lang="fr-CA">Page introuvable. <a href="/fr/">Retour à l'accueil en français</a>.</p>
+  {{- end }}
+</main>
+{{ partial "footer_regular.html" . }}
+{{ end }}

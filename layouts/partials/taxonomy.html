@@ -1,0 +1,10 @@
+<main id="main" class="flex flex-col gap-4 pt-8">
+  <h1 class="text-3xl max-sm:text-2xl font-bold">{{ .Title }}</h1>
+  <hr />
+  <ul class="tag-list">
+    {{ range .Scratch.Get "taxonomy" }}
+    <li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title | lower }} ({{ .Count }})</a></li>
+    {{ end }}
+  </ul>
+</main>
+{{ partial "footer_regular.html" . }}

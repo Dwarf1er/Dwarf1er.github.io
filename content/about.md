@@ -17,7 +17,7 @@ The work I enjoy most sits where software development meets infrastructure: Linu
 
 {{< img-header src="/algo.png" alt="Algo Design Logo" >}}Algo Design – Software Developer, Automation & Internal Tooling{{< /img-header >}}
 September 2024 – Present\
-**Tech Stack:** C# | .NET | Avalonia | SQL Anywhere | ODBC | GitHub Actions | MCP
+**Tech Stack:** C# | .NET | Avalonia | SQL Anywhere | ODBC | GitHub Actions | GitLab CI | MCP
 
 - Built a cross-platform Avalonia app and CLI used by ~20 developers to manage local databases, backups, and updates, and to launch the app with the correct version and database. Saves an estimated 20–60 engineering hours per week.
 - Automated the app's builds and distribution with GitHub Actions.
@@ -27,6 +27,7 @@ September 2024 – Present\
 January 2024 – September 2024\
 **Tech Stack:** C# | .NET | Blazor | SQL Server | PowerShell | Azure DevOps
 
+- Built and maintained Azure DevOps pipelines to build and release the company's products to every environment.
 - Replaced ZPL printing software with an in-house solution, saving approximately $25,000 per year.
 - Built a web app that converts PowerShell scripts into interactive forms with input validation and contextual help.
 
@@ -38,7 +39,7 @@ September 2022 – January 2024\
 - Developed .NET applications for shipment tracking.
 
 {{< img-header src="/bitumar.png" alt="Bitumar Logo" >}}Bitumar – IT Technician, Systems & Infrastructure{{< /img-header >}}
-May 2018 – September 2022\
+May 2018 – September 2022 · Part-time\
 **Tech Stack:** Windows Server | Linux
 
 - Administered Windows and Linux servers, provided IT support, and automated maintenance tasks.
@@ -68,6 +69,6 @@ More details on the [Projects](/projects/) page.
 
 - **Development:** C# | PowerShell | Bash | Python | TypeScript | .NET | Avalonia | Blazor
 - **DevOps & CI/CD:** GitHub Actions | GitLab CI | Azure DevOps | Docker | Git
-- **Linux & Infrastructure:** Linux (Arch) | systemd | BTRFS | Networking
+- **Linux & Infrastructure:** Linux (Arch, Debian, Ubuntu) | systemd | BTRFS/Snapper | nftables | PKGBUILD/AUR | Networking (DNS, DHCP, VPN)
 - **Databases:** SQL Server | SQL Anywhere | MySQL | SQLite
 - **Spoken languages:** French (native) | English (bilingual)

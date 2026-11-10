@@ -17,7 +17,7 @@ Le travail qui m'intéresse le plus se situe là où le développement logiciel 
 
 {{< img-header src="/algo.png" alt="Logo d'Algo Design" >}}Algo Design – Développeur logiciel, automatisation et outillage interne{{< /img-header >}}
 Septembre 2024 – Présent\
-**Technologies :** C# | .NET | Avalonia | SQL Anywhere | ODBC | GitHub Actions | MCP
+**Technologies :** C# | .NET | Avalonia | SQL Anywhere | ODBC | GitHub Actions | GitLab CI | MCP
 
 - Développé une application Avalonia cross-platform et une CLI utilisées par ~20 développeurs pour gérer leurs bases de données locales, backups et mises à jour, et lancer l'application avec la bonne version et la bonne base de données. Économie estimée de 20 à 60 heures de travail par semaine.
 - Automatisé les builds et la distribution de l'application avec GitHub Actions.
@@ -27,6 +27,7 @@ Septembre 2024 – Présent\
 Janvier 2024 – Septembre 2024\
 **Technologies :** C# | .NET | Blazor | SQL Server | PowerShell | Azure DevOps
 
+- Créé et maintenu les pipelines Azure DevOps de build et de release des produits de l'entreprise vers tous les environnements.
 - Remplacé un logiciel d'impression ZPL par une solution interne, économisant environ 25 000 $ par année.
 - Développé une application web transformant des scripts PowerShell en formulaires interactifs avec validation et aide contextuelle.
 
@@ -38,7 +39,7 @@ Septembre 2022 – Janvier 2024\
 - Développé des applications .NET de suivi des expéditions.
 
 {{< img-header src="/bitumar.png" alt="Logo de Bitumar" >}}Bitumar – Technicien informatique, systèmes et infrastructure{{< /img-header >}}
-Mai 2018 – Septembre 2022\
+Mai 2018 – Septembre 2022 · Temps partiel\
 **Technologies :** Windows Server | Linux
 
 - Administré des serveurs Windows et Linux, assuré le soutien informatique et automatisé des tâches de maintenance.
@@ -68,6 +69,6 @@ Plus de détails sur la page [Projets](/fr/projets/).
 
 - **Développement :** C# | PowerShell | Bash | Python | TypeScript | .NET | Avalonia | Blazor
 - **DevOps et CI/CD :** GitHub Actions | GitLab CI | Azure DevOps | Docker | Git
-- **Linux et infrastructure :** Linux (Arch) | systemd | BTRFS | Networking
+- **Linux et infrastructure :** Linux (Arch, Debian, Ubuntu) | systemd | BTRFS/Snapper | nftables | PKGBUILD/AUR | Networking (DNS, DHCP, VPN)
 - **Bases de données :** SQL Server | SQL Anywhere | MySQL | SQLite
 - **Langues :** Français (langue maternelle) | Anglais (bilingue)

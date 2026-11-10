@@ -1,0 +1,20 @@
+# Repo-local mise config: https://mise.jdx.dev/configuration.html
+
+[tools]
+"hugo-extended" = "0.145.0" # matches CI (.github/workflows/deploy.yml)
+
+[tasks.dev]
+description = "Run Hugo dev server (pass extra args after --, e.g. --bind 0.0.0.0)"
+run = "hugo server --buildDrafts --disableFastRender"
+
+[tasks.serve]
+alias = "dev"
+description = "Alias for dev"
+
+[tasks.build]
+description = "Build the site (production-like; CI also sets --baseURL)"
+run = "hugo --gc --minify"
+
+[tasks.clean]
+description = "Remove Hugo build artifacts"
+run = "rm -rf public resources/_gen .hugo_build.lock"

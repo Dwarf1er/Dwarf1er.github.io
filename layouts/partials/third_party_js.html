@@ -1,0 +1,7 @@
+{{- /* Same as the theme's partial, but doesn't fail when the folder is missing
+       (git doesn't track empty folders, so it's absent on a fresh clone). */ -}}
+{{- if fileExists "layouts/partials/third_party_js" -}}
+  {{- range readDir "layouts/partials/third_party_js" -}}
+    {{- partial (printf "third_party_js/%s" .Name) $ -}}
+  {{- end -}}
+{{- end -}}

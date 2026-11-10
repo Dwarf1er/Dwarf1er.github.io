@@ -2,8 +2,8 @@
 title: "I got annoyed by expensive proprietary ZPL tools, so I built my own"
 date: 2025-03-11
 draft: false
-categories: ["Open Source", "C#"]
 tags: ["zpl", "opensource", "csharp"]
+description: "Why I built OpenLabel, an open-source C# library for ZPL label printers with network printing, DPI scaling, and conditional templates."
 ---
 
 ### Labeling Shouldn’t Be a Hassle
@@ -12,15 +12,15 @@ Ah, printers. Arguably the world’s most universally despised peripheral. But a
 
 ### The Birth of OpenLabel
 
-I was one of the unfortunate developers tasked with subduing the label-spewing demons. Our current solution was draining us out to the tune of $25,000 anually in licensing fees for a software that had in reality only a few core features:
+At a previous job, I was one of the unfortunate developers tasked with subduing the label-spewing demons. The solution we used was draining the company to the tune of $25,000 annually in licensing fees, for software that really only had a few core features:
 
 - Network printing
-- ZPL temlating with conditional rendering
+- ZPL templating with conditional rendering
 - ZPL DPI scaling
 
 Of course, we were paying such a premium for the GUI editor that let you create labels using drag-and-drop components. However, mastering the arcane magic of ZPL isn't that difficult, especially with the excellent web-based editor [Labelary](https://labelary.com/).
 
-With that in mind, I set out to create **OpenLabel**, a C# library designed to give developers the features necessary to build ZPL printing applications easily.
+At work, we replaced it with an in-house solution. Separately, on my own time, I set out to create **OpenLabel**, an open-source C# library designed to give any developer the features necessary to build ZPL printing applications easily.
 
 ### How OpenLabel Works: A Quick Example
 
@@ -49,11 +49,4 @@ At its core, OpenLabel is about freedom. It frees you from expensive, restrictiv
 
 ### Get Involved
 
-This is just the beginning! This tool is made to facilitate the creation of applications for ZPL printers, free from closed-source code. Like any open-source project, it thrives on **community involvement**
-
-If OpenLabel interests you consider taking a few minutes to do the following:
-- ⭐ Star the repository on GitHub to show your support and help others discover this project.
-- Contribute: Whether you’ve found a bug, want to improve the code, or have ideas for new features, your contributions are more than welcome. Fork the repo, submit a pull request, or open an issue. Let’s make OpenLabel even better together!
-- Spread the Word: Share OpenLabel with your community, colleagues, or anyone who works with ZPL labels. The more users we have, the stronger the project becomes!
-
-Every little bit of feedback, contribution, or star helps OpenLabel grow into a tool that can support more use cases, be more efficient, and ultimately make label printing a smoother process for developers everywhere.
+OpenLabel is open source on [GitHub](https://github.com/Dwarf1er/openlabel) and available on [NuGet](https://www.nuget.org/packages/OpenLabel). Bug reports, feature ideas, and pull requests are all welcome.

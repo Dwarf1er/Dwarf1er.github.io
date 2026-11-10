@@ -2,8 +2,8 @@
 title: "How to Setup Neovim 0.12+ for C# Development with vim.pack"
 date: 2025-08-08
 draft: false
-categories: ["Open Source", "C#", "Neovim"]
 tags: ["neovim", "opensource", "csharp"]
+description: "A step-by-step setup for C# and Razor development in Neovim 0.12+ using the built-in vim.pack package manager."
 ---
 
 ### Introduction

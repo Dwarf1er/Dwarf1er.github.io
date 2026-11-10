@@ -1,83 +1,73 @@
 ---
-title: "👨‍💻 About Me"
+title: "About me"
 date: 2025-11-02
 draft: false
-layout: "terms"
-description: "Hi, I'm Antoine Poulin! This page tells my story and what I'm working on."
-url: "/about"
+description: "Antoine Poulin's background: software developer at Algo Design building internal tools and automation, with earlier roles at Trévi, Bell Helicopter, and Bitumar."
+url: "/about/"
+showCV: true
 ---
 
-## Hello there, I'm Antoine 👋
+Hi, I'm Antoine. Most of my projects start the same way: **"There has to be a better way to do this."**
 
-Most of my projects start the same way: **"There has to be a better way to do this."**
+I'm a software developer with a background in IT and systems administration. I started out administering Windows and Linux servers, moved into software development, and kept gravitating toward the same kind of work: automation, internal tools, and the systems that software runs on.
 
-I believe software should be open and shareable. I enjoy building developer tooling and find great satisfaction in automating processes. I live in my terminal on Arch Linux and Hyprland; yes, with one of those vilainesque [split keyboards](https://keeb.io/products/iris-se) :)
-
-**Recent wins:** 
-- Leading the migration of a legacy .NET Framework 4.5.2 application to .NET 10.0, including architectural redesign
-- Reduced deployment time by 80% by building CI/CD pipelines that automate change bundling and releases
-- Saved $25K annually by building a custom ZPL label printing library that replaced expensive third-party software
-- Developed internal REST APIs for data integration and cross-system communication
-- Transformed PowerShell scripts into user-friendly web applications for non-technical teams
-
-**Currently working on:**
-- **Building platform tools and APIs at Algo Design**
-- **[OpenLabel](https://github.com/Dwarf1er/OpenLabel)**: C# library for ZPL label printing
-- **Learning Golang and exploring Rust**
+The work I enjoy most sits where software development meets infrastructure: Linux, CI/CD, automation, and developer tooling.
 
 ## **Work Experience**
 
-{{< img-header src="/algo.png" alt="Algo Design Logo" >}}Algo Design - Software Developer{{< /img-header >}}
-September 2024 – Present
-**Tech Stack:** C# | .NET | Blazor | MSSQL | GitLab CI | Azure DevOps
+{{< img-header src="/algo.png" alt="Algo Design Logo" >}}Algo Design – Software Developer, Automation & Internal Tooling{{< /img-header >}}
+September 2024 – Present\
+**Tech Stack:** C# | .NET | Avalonia | SQL Anywhere | ODBC | GitHub Actions | MCP
 
-- Developed internal REST APIs for data integration and cross-system communication, improving developer workflows
-- Leading the migration of a legacy .NET Framework 4.5.2 application to .NET 10.0, including modernizing the architecture and updating dependencies
-- Reduced deployment preparation time by 80% by implementing CI/CD pipelines that automate database change bundling and deployment processes
+- Built a cross-platform Avalonia app and CLI used by ~20 developers to manage local databases, backups, and updates, and to launch the app with the correct version and database. Saves an estimated 20–60 engineering hours per week.
+- Automated the app's builds and distribution with GitHub Actions.
+- Developed a cross-platform C#/.NET MCP server for SQL Anywhere 17 ([sqlanywhere-mcp](https://github.com/Dwarf1er/sqlanywhere-mcp)). It enables AI assistants to inspect database schemas and procedures, search SQL code, and run read-only queries. It's published on NuGet, with CI-built releases for Windows, Linux, and macOS.
 
-{{< img-header src="/trevi.png" alt="Trevi Logo" >}}Trévi – Full Stack Developer{{< /img-header >}}
-January 2024 – September 2024
-**Tech Stack:** C# | .NET | Blazor | MSSQL | PowerShell | Azure DevOps
+{{< img-header src="/trevi.png" alt="Trevi Logo" >}}Trévi – Software Developer, Internal Tools & Automation{{< /img-header >}}
+January 2024 – September 2024\
+**Tech Stack:** C# | .NET | Blazor | SQL Server | PowerShell | Azure DevOps
 
-- Saved $25,000 annually by developing an in-house ZPL printing solution that replaced expensive third-party software
-- Built a web application that dynamically parsed PowerShell scripts to auto-generate forms with validation and tooltips, enabling staff to run complex operations without learning command-line syntax
-- Worked with the helpdesk team to design intuitive interfaces for technical operations
+- Replaced ZPL printing software with an in-house solution, saving approximately $25,000 per year.
+- Built a web app that converts PowerShell scripts into interactive forms with input validation and contextual help.
 
-{{< img-header src="/bell-helicopter.png" height="41" alt="Bell Helicopter Logo" >}}Bell Helicopter – Software Developer{{< /img-header >}}
-September 2022 – January 2024
-**Tech Stack:** C# | .NET | MSSQL | PowerShell | Atlassian Suite (Confluence, Jira, Bitbucket)
+{{< img-header src="/bell-helicopter.png" height="41" alt="Bell Helicopter Logo" >}}Bell Helicopter – Software Developer, Automation & Integration{{< /img-header >}}
+September 2022 – January 2024\
+**Tech Stack:** C# | .NET | SQL Server | PowerShell | TypeScript | Atlassian tools
 
-- Collaborated with warehouse staff to identify requirements and iterate on solutions
-- Streamlined warehouse operations by developing custom .NET applications that improved shipment tracking
-- Reduced update and installation ticket resolution time from 4 days to 15 minutes by automating software deployments
+- Automated software deployments, cutting resolution time for software installation and update tickets from 4 days to 15 minutes.
+- Developed .NET applications for shipment tracking.
 
-{{< img-header src="/bitumar.png" alt="Bitumar Logo" >}}Bitumar - IT Technician{{< /img-header >}}
-May 2018 – September 2022
-**Tech Stack:** Windows Server | Linux | PowerShell | Bash
+{{< img-header src="/bitumar.png" alt="Bitumar Logo" >}}Bitumar – IT Technician, Systems & Infrastructure{{< /img-header >}}
+May 2018 – September 2022\
+**Tech Stack:** Windows Server | Linux
 
-- Administered Windows and Linux servers.
-- Automated operational tasks using PowerShell and Bash scripts.
-- Managed software deployments and supported production environments.
+- Administered Windows and Linux servers, provided IT support, and automated maintenance tasks.
 
 ---
 
 ## **Education**
 
 {{< img-header src="/concordia.png" alt="Concordia University Logo" >}}Concordia University{{< /img-header >}}
-Bachelor of Science in Computer Science – 2019-2022
+Bachelor of Science in Computer Science
 
 {{< img-header src="/lionel-groulx.png" alt="College Lionel-Groulx Logo" >}}Collège Lionel-Groulx{{< /img-header >}}
-DEC in Computer Science and Mathematics – 2017-2019
+DEC in Computer Science and Mathematics
+
+---
+
+## **Projects**
+
+- **[OpenLabel](https://github.com/Dwarf1er/openlabel):** an open-source C# library for ZPL printing, with network printing, DPI scaling, and conditional templates. ~96 GitHub stars and 3,200 NuGet downloads.
+- **[Sobarch](https://sobarch.antoinepoulin.com):** a custom Arch Linux distribution with its own installer and monthly signed ISOs built by GitHub Actions. It integrates BTRFS/Snapper recovery into the Limine boot menu and ships custom Fuzzel menus.
+
+More details on the [Projects](/projects/) page.
 
 ---
 
 ## **Skills**
 
-- **Languages:** Python | Node.js | Golang *(learning)* | Rust (learning) | C# | JavaScript | TypeScript | PowerShell | Bash
-- **Platform & DevOps:** Docker | Kubernetes *(learning)* | CI/CD Pipelines | Git | GitHub Actions | GitLab CI | Azure DevOps
-- **Frameworks & Tools:** .NET | Flask | Node.js | Blazor | Photino.Blazor
-- **Databases:** MSSQL | MariaDB | MySQL | SQLite
-- **Architecture & Practices:** REST APIs | Internal Tooling | Automation | Developer Experience
-- **Operating Systems:** Linux (Ubuntu, Fedora, Debian, Arch) | Windows | Windows Server
-- **Development Environment:** Neovim | Linux-based development workflows
-- **Languages:** English (native) | French (native)
+- **Development:** C# | PowerShell | Bash | Python | TypeScript | .NET | Avalonia | Blazor
+- **DevOps & CI/CD:** GitHub Actions | GitLab CI | Azure DevOps | Docker | Git
+- **Linux & Infrastructure:** Linux (Arch) | systemd | BTRFS | Networking
+- **Databases:** SQL Server | SQL Anywhere | MySQL | SQLite
+- **Spoken languages:** French (native) | English (bilingual)

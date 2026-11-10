@@ -1,7 +1,7 @@
 ---
-title: "📝 Blog"
+title: "Blog"
 date: 2025-03-10
-url: "/blog"
+url: "/blog/"
 draft: false
-description: "Explore articles on software development, web technologies, and open-source contributions by Antoine Poulin."
+description: "Write-ups by Antoine Poulin on software development, Linux, automation, and developer tooling."
 ---

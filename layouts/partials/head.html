@@ -18,7 +18,9 @@
 {{- else }}
 <link rel="canonical" href="{{ .Permalink }}">
 {{- end }}
-<link rel="icon" href="{{ "favicon.ico" | absURL }}" sizes="any">
+<link rel="icon" href="{{ "favicon.ico" | relURL }}" sizes="32x32">
+<link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
+<link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
 <meta name="theme-color" content="#0f172a">
 {{- if and .IsTranslated (ne .Kind "404") }}
 {{- range .AllTranslations }}
